@@ -4,15 +4,17 @@ final class FileCache {
     private (set) var items: [String: TodoItem] = [:]
     private var fileTable: [String: String] = [:]
 
+    @discardableResult
     func addTask(_ task: TodoItem) -> Bool {
         let id = task.id
-        if checkKeyContaining(id: id) {
+        if !checkKeyContaining(id: id) {
             items[id] = task
             return true
         }
         return false
     }
 
+    @discardableResult
     func deleteTask(byId id: String) -> Bool {
         if checkKeyContaining(id: id) {
             items.removeValue(forKey: id)

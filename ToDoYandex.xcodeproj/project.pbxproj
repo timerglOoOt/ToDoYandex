@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE4BC9102C260AFA00C5A166 /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC90F2C260AFA00C5A166 /* FileCache.swift */; };
+		CE4BC9142C261A9700C5A166 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4BC9132C261A9700C5A166 /* test.json */; };
 		CECEE4962C22134200F1B946 /* ToDoYandexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEE4952C22134200F1B946 /* ToDoYandexApp.swift */; };
 		CECEE4982C22134200F1B946 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEE4972C22134200F1B946 /* ContentView.swift */; };
 		CECEE49A2C22134300F1B946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECEE4992C22134300F1B946 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		CE4BC90F2C260AFA00C5A166 /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
+		CE4BC9132C261A9700C5A166 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = test.json; path = "../../../../Library/Developer/XCTestDevices/D0697883-5D35-4A25-9B05-A16E166BA05E/data/Containers/Data/Application/8BABCD60-E6F5-4C7C-A884-C1A9096FF4DF/Documents/test.json"; sourceTree = "<group>"; };
 		CECEE4922C22134200F1B946 /* ToDoYandex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoYandex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECEE4952C22134200F1B946 /* ToDoYandexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoYandexApp.swift; sourceTree = "<group>"; };
 		CECEE4972C22134200F1B946 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		CECEE4892C22134200F1B946 = {
 			isa = PBXGroup;
 			children = (
+				CE4BC9132C261A9700C5A166 /* test.json */,
 				CECEE4942C22134200F1B946 /* ToDoYandex */,
 				CECEE4A52C22134400F1B946 /* ToDoYandexTests */,
 				CECEE4AF2C22134400F1B946 /* ToDoYandexUITests */,
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECEE49D2C22134300F1B946 /* Preview Assets.xcassets in Resources */,
+				CE4BC9142C261A9700C5A166 /* test.json in Resources */,
 				CECEE49A2C22134300F1B946 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
