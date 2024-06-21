@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C75A5A46-CBBB-47F0-8715-B0B337E9A009"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6B0C13A4-39A6-4F8A-9A86-49631962FE06"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToDoYandex/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52B1EA0F-0E7F-4ED3-BD05-92F8EE0323E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "parseJson(json:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A442D7FB-4346-4F40-82EC-DFB6F0BC0E43"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "parseJson(json:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A442D7FB-4346-4F40-82EC-DFB6F0BC0E43 - 81479528ed154abb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ToDoYandex.TodoItem.parse(json: Any) -&gt; Swift.Optional&lt;ToDoYandex.TodoItem&gt;"
+                  moduleName = "ToDoYandex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Extension/TodoItem+JsonParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "616">
+               </Location>
+               <Location
+                  uuid = "A442D7FB-4346-4F40-82EC-DFB6F0BC0E43 - 81479528ed154abb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ToDoYandex.TodoItem.parse(json: Any) -&gt; Swift.Optional&lt;ToDoYandex.TodoItem&gt;"
+                  moduleName = "ToDoYandex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Extension/TodoItem+JsonParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "832">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DA1E72E-A1EB-4546-B5C3-395A856FDCFF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "parseJson(json:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8A9AB05-3E5D-46EA-A173-E6FF2B478A43"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToDoYandexTests/ToDoYandexTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "test_convert_to_csv_text_format()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C8A9AB05-3E5D-46EA-A173-E6FF2B478A43 - 88dc9d84e3b230a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToDoYandexTests.ToDoYandexTests.test_convert_to_csv_text_format() throws -&gt; ()"
+                  moduleName = "ToDoYandexTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandexTests/ToDoYandexTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "C8A9AB05-3E5D-46EA-A173-E6FF2B478A43 - 88dc9d84e3b23143"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToDoYandexTests.ToDoYandexTests.test_convert_to_csv_text_format() throws -&gt; ()"
+                  moduleName = "ToDoYandexTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandexTests/ToDoYandexTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "896">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
