@@ -94,4 +94,17 @@ final class ToDoYandexTests: XCTestCase {
         let item2 = TodoItem(text: testText, priority: .high)
         XCTAssertNotEqual(item1, item2, "Неправильно работает операция сравнения экземпляров структуры")
     }
+
+    func test_save_to_file() throws {
+        let fileCache = FileCache()
+
+        let task1 = TodoItem(id: "1", text: "Complete assignment", priority: .high)
+        let task2 = TodoItem(id: "2", text: "Prepare presentation", priority: .normal)
+        fileCache.addTask(task1)
+        fileCache.addTask(task2)
+
+        Task {
+            try await fileCache.save(to:"test.json")
+        }
+    }
 }
