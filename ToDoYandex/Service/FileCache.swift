@@ -1,11 +1,11 @@
 import Foundation
 
-final class FileCache {
-    private (set) var items: [String: TodoItem] = [:]
+final class FileCache: ObservableObject {
+    @Published private (set) var items: [String: TodoItem] = [:]
     private var fileTable: [String: String] = [:]
 
     @discardableResult
-    func addTask(_ task: TodoItem) -> Bool {
+    func addItem(_ task: TodoItem) -> Bool {
         let id = task.id
         if !checkKeyContaining(id: id) {
             items[id] = task
@@ -15,7 +15,7 @@ final class FileCache {
     }
 
     @discardableResult
-    func deleteTask(byId id: String) -> Bool {
+    func deleteItem(byId id: String) -> Bool {
         if checkKeyContaining(id: id) {
             items.removeValue(forKey: id)
             return true
@@ -36,16 +36,17 @@ final class FileCache {
 
     func load(from filename: String) async throws {
         let filePath = try getFilePath(for: filename)
-        if FileManager.default.fileExists(atPath: filePath.path) {
+        if FileManager.default.fileExists(atPath: filePath.path()) {
             do {
                 let data = try Data(contentsOf: filePath)
-                if let jsonArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
+                if let jsonArray = try JSONSerialization.jsonObject(with: data) as? [[String: Any]] {
                     var loadedItems: [String: TodoItem] = [:]
                     for dict in jsonArray {
                         if let item = TodoItem.parseJson(json: dict) {
                             loadedItems[item.id] = item
                         }
                     }
+
                     items = loadedItems
                 }
             } catch {
@@ -55,6 +56,19 @@ final class FileCache {
             let error = NSError(domain: "FileCache", code: 404, userInfo: [NSLocalizedDescriptionKey: "File not found: \(filename)"])
             throw error
         }
+    }
+
+    func getItem(by id: String) -> TodoItem? {
+        return items[id]
+    }
+
+    func isItemExist(by id: String) -> Bool {
+        return getItem(by: id) != nil
+    }
+
+    func updateItem(_ item: TodoItem) {
+        let id = item.id
+        items[id] = item
     }
 }
 

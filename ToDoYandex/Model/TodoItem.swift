@@ -6,18 +6,19 @@ enum Priority: String {
     case high = "Важное"
 }
 
-struct TodoItem {
+struct TodoItem: Identifiable {
     let id: String
     let text: String
     let priority: Priority
     let deadline: Date?
-    let isDone: Bool
-    let createdDate: Date
+    var isDone: Bool
+    var createdDate: Date
     let modifiedDate: Date?
+    var hexColor: String?
 
     // MARK: Добавил конструктор, чтобы можно было избежать опциональные поля при инициализации
 
-    init(id: String = UUID().uuidString, text: String, priority: Priority, deadline: Date? = nil, isDone: Bool = false, createdDate: Date = Date(), modifiedDate: Date? = nil) {
+    init(id: String = UUID().uuidString, text: String, priority: Priority, deadline: Date? = nil, isDone: Bool = false, createdDate: Date = Date(), modifiedDate: Date? = nil, hexColor: String? = nil) {
         self.id = id
         self.text = text
         self.priority = priority
@@ -25,5 +26,12 @@ struct TodoItem {
         self.isDone = isDone
         self.createdDate = createdDate
         self.modifiedDate = modifiedDate
+        self.hexColor = hexColor
+    }
+}
+
+extension TodoItem {
+    var isHighPriority: Bool {
+        priority == .high
     }
 }
