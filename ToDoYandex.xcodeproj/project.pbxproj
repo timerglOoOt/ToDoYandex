@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE294C272C2C428000BA60F1 /* TaskDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE294C262C2C428000BA60F1 /* TaskDetailsViewModel.swift */; };
+		CE294C292C2C484D00BA60F1 /* TaskDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE294C282C2C484D00BA60F1 /* TaskDetailsView.swift */; };
+		CE294C2B2C2C623E00BA60F1 /* Date+toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE294C2A2C2C623E00BA60F1 /* Date+toString.swift */; };
 		CE4BC9102C260AFA00C5A166 /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC90F2C260AFA00C5A166 /* FileCache.swift */; };
-		CE4BC9142C261A9700C5A166 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = CE4BC9132C261A9700C5A166 /* test.json */; };
+		CE8FFEE82C2DE2D600CF0997 /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FFEE72C2DE2D600CF0997 /* CustomTextEditor.swift */; };
 		CECEE4962C22134200F1B946 /* ToDoYandexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEE4952C22134200F1B946 /* ToDoYandexApp.swift */; };
 		CECEE4982C22134200F1B946 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEE4972C22134200F1B946 /* ContentView.swift */; };
 		CECEE49A2C22134300F1B946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECEE4992C22134300F1B946 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 		CECEE4C42C2215D800F1B946 /* TodoItem+JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEE4C32C2215D800F1B946 /* TodoItem+JsonParser.swift */; };
 		CECEE4C62C221FDC00F1B946 /* TodoItem+CsvParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEE4C52C221FDC00F1B946 /* TodoItem+CsvParser.swift */; };
 		CEDE565F2C25631F00E8BC21 /* TodoItem+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE565E2C25631F00E8BC21 /* TodoItem+Equatable.swift */; };
+		CEEB07FB2C2EE53400CEE8E1 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB07FA2C2EE53400CEE8E1 /* ContentViewModel.swift */; };
+		CEEB07FD2C2F9BB000CEE8E1 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB07FC2C2F9BAF00CEE8E1 /* Color+Hex.swift */; };
+		CEEDC6332C2B2577008F857C /* TodoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC6322C2B2577008F857C /* TodoRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE294C262C2C428000BA60F1 /* TaskDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewModel.swift; sourceTree = "<group>"; };
+		CE294C282C2C484D00BA60F1 /* TaskDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsView.swift; sourceTree = "<group>"; };
+		CE294C2A2C2C623E00BA60F1 /* Date+toString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toString.swift"; sourceTree = "<group>"; };
 		CE4BC90F2C260AFA00C5A166 /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
-		CE4BC9132C261A9700C5A166 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = test.json; path = "../../../../Library/Developer/XCTestDevices/D0697883-5D35-4A25-9B05-A16E166BA05E/data/Containers/Data/Application/8BABCD60-E6F5-4C7C-A884-C1A9096FF4DF/Documents/test.json"; sourceTree = "<group>"; };
+		CE8FFEE72C2DE2D600CF0997 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		CECEE4922C22134200F1B946 /* ToDoYandex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoYandex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECEE4952C22134200F1B946 /* ToDoYandexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoYandexApp.swift; sourceTree = "<group>"; };
 		CECEE4972C22134200F1B946 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +65,9 @@
 		CECEE4C32C2215D800F1B946 /* TodoItem+JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoItem+JsonParser.swift"; sourceTree = "<group>"; };
 		CECEE4C52C221FDC00F1B946 /* TodoItem+CsvParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoItem+CsvParser.swift"; sourceTree = "<group>"; };
 		CEDE565E2C25631F00E8BC21 /* TodoItem+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoItem+Equatable.swift"; sourceTree = "<group>"; };
+		CEEB07FA2C2EE53400CEE8E1 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CEEB07FC2C2F9BAF00CEE8E1 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		CEEDC6322C2B2577008F857C /* TodoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE294C252C2C426C00BA60F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE294C262C2C428000BA60F1 /* TaskDetailsViewModel.swift */,
+				CEEB07FA2C2EE53400CEE8E1 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CE4BC90E2C260AEA00C5A166 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +115,6 @@
 		CECEE4892C22134200F1B946 = {
 			isa = PBXGroup;
 			children = (
-				CE4BC9132C261A9700C5A166 /* test.json */,
 				CECEE4942C22134200F1B946 /* ToDoYandex */,
 				CECEE4A52C22134400F1B946 /* ToDoYandexTests */,
 				CECEE4AF2C22134400F1B946 /* ToDoYandexUITests */,
@@ -115,11 +135,12 @@
 		CECEE4942C22134200F1B946 /* ToDoYandex */ = {
 			isa = PBXGroup;
 			children = (
+				CE294C252C2C426C00BA60F1 /* ViewModel */,
+				CEEDC6312C2B2567008F857C /* Views */,
 				CE4BC90E2C260AEA00C5A166 /* Service */,
 				CECEE4C22C22159200F1B946 /* Extension */,
 				CECEE4BF2C2213A800F1B946 /* Model */,
 				CECEE4952C22134200F1B946 /* ToDoYandexApp.swift */,
-				CECEE4972C22134200F1B946 /* ContentView.swift */,
 				CECEE4992C22134300F1B946 /* Assets.xcassets */,
 				CECEE49B2C22134300F1B946 /* Preview Content */,
 			);
@@ -165,8 +186,21 @@
 				CECEE4C32C2215D800F1B946 /* TodoItem+JsonParser.swift */,
 				CECEE4C52C221FDC00F1B946 /* TodoItem+CsvParser.swift */,
 				CEDE565E2C25631F00E8BC21 /* TodoItem+Equatable.swift */,
+				CE294C2A2C2C623E00BA60F1 /* Date+toString.swift */,
+				CEEB07FC2C2F9BAF00CEE8E1 /* Color+Hex.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		CEEDC6312C2B2567008F857C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CECEE4972C22134200F1B946 /* ContentView.swift */,
+				CEEDC6322C2B2577008F857C /* TodoRow.swift */,
+				CE294C282C2C484D00BA60F1 /* TaskDetailsView.swift */,
+				CE8FFEE72C2DE2D600CF0997 /* CustomTextEditor.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +308,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECEE49D2C22134300F1B946 /* Preview Assets.xcassets in Resources */,
-				CE4BC9142C261A9700C5A166 /* test.json in Resources */,
 				CECEE49A2C22134300F1B946 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,12 +333,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8FFEE82C2DE2D600CF0997 /* CustomTextEditor.swift in Sources */,
+				CEEB07FB2C2EE53400CEE8E1 /* ContentViewModel.swift in Sources */,
 				CECEE4C62C221FDC00F1B946 /* TodoItem+CsvParser.swift in Sources */,
+				CE294C2B2C2C623E00BA60F1 /* Date+toString.swift in Sources */,
 				CEDE565F2C25631F00E8BC21 /* TodoItem+Equatable.swift in Sources */,
+				CE294C272C2C428000BA60F1 /* TaskDetailsViewModel.swift in Sources */,
+				CE294C292C2C484D00BA60F1 /* TaskDetailsView.swift in Sources */,
+				CEEB07FD2C2F9BB000CEE8E1 /* Color+Hex.swift in Sources */,
 				CE4BC9102C260AFA00C5A166 /* FileCache.swift in Sources */,
 				CECEE4982C22134200F1B946 /* ContentView.swift in Sources */,
 				CECEE4C12C2213BD00F1B946 /* TodoItem.swift in Sources */,
 				CECEE4962C22134200F1B946 /* ToDoYandexApp.swift in Sources */,
+				CEEDC6332C2B2577008F857C /* TodoRow.swift in Sources */,
 				CECEE4C42C2215D800F1B946 /* TodoItem+JsonParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

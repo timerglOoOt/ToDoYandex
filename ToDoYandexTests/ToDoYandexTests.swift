@@ -100,8 +100,8 @@ final class ToDoYandexTests: XCTestCase {
 
         let task1 = TodoItem(id: "1", text: "Complete assignment", priority: .high)
         let task2 = TodoItem(id: "2", text: "Prepare presentation", priority: .normal)
-        fileCache.addTask(task1)
-        fileCache.addTask(task2)
+        fileCache.addItem(task1)
+        fileCache.addItem(task2)
 
         Task {
             try await fileCache.save(to:"test.json")
