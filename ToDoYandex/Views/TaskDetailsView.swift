@@ -26,7 +26,9 @@ struct TaskDetailsView: View {
             }.onTapGesture {
                 isTextEditorFocused = false
             }
-            .navigationBarTitle("Дело", displayMode: .inline)
+            .navigationTitle("Дело")
+            .navigationBarTitleDisplayMode(.inline)
+//            .navigationBarTitle("Дело", displayMode: .inline)
             .navigationBarItems(leading: Button("Отменить") {
                 dismiss()
             }, trailing: Button("Сохранить") {

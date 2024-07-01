@@ -54,6 +54,7 @@ struct ContentView: View {
             ForEach($contentViewModel.items.sorted { $0.createdDate.wrappedValue < $1.createdDate.wrappedValue }) { $item in
                 if showAllItems || !item.isDone {
                     TodoRow(item: $item)
+                        .contentShape(Rectangle())
                         .onTapGesture {
                             openItem(by: item.id)
                         }
