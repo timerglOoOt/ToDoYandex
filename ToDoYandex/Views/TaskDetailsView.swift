@@ -9,6 +9,7 @@ struct TaskDetailsView: View {
     @State private var isExpanded = false
     @State var showingEmptyTextAlert = false
     @State var color = Color.clear
+    @FocusState private var isTextEditorFocused: Bool
 
     init(taskDetailsViewModel: TaskDetailsViewModel) {
         self.taskDetailsViewModel = taskDetailsViewModel
@@ -22,6 +23,8 @@ struct TaskDetailsView: View {
                 } else {
                     verticalView
                 }
+            }.onTapGesture {
+                isTextEditorFocused = false
             }
             .navigationBarTitle("Дело", displayMode: .inline)
             .navigationBarItems(leading: Button("Отменить") {
@@ -73,6 +76,7 @@ struct TaskDetailsView: View {
         HStack(spacing: 0) {
             VStack {
                 CustomTextEditor(text: $taskDetailsViewModel.taskText, placeholder: "Что надо сделать?")
+                    .focused($isTextEditorFocused)
                     .frame(maxWidth: isExpanded ? .infinity : UIScreen.main.bounds.width / 2)
                     .padding(.horizontal)
                     .onTapGesture {
@@ -98,6 +102,7 @@ struct TaskDetailsView: View {
     private var verticalView: some View {
         VStack {
             CustomTextEditor(text: $taskDetailsViewModel.taskText, placeholder: "Что надо сделать?")
+                .focused($isTextEditorFocused)
                 .padding(.horizontal)
                 .onTapGesture {
                     withAnimation {
