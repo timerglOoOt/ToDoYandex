@@ -6,10 +6,6 @@ struct ContentView: View {
     @State var itemId = ""
     @State var showAllItems = true
 
-    private var doneItemsCount: Int {
-        contentViewModel.items.filter { $0.isDone }.count
-    }
-
     init(contentViewModel: ContentViewModel) {
         self.contentViewModel = contentViewModel
     }
@@ -19,7 +15,7 @@ struct ContentView: View {
             ZStack {
                 VStack {
                     HStack {
-                        Text("Выполнено - \(doneItemsCount)")
+                        Text("Выполнено - \(contentViewModel.doneItemsCount)")
                         Spacer()
                         Button(action: {
                             showAllItems.toggle()
@@ -39,7 +35,7 @@ struct ContentView: View {
                     addButton
                 }
 
-                .navigationBarTitle("Мои дела")
+                .navigationTitle("Мои дела")
                 .sheet(isPresented: $isOpened) {
                     TaskDetailsView(
                         taskDetailsViewModel: TaskDetailsViewModel(
@@ -55,7 +51,7 @@ struct ContentView: View {
 
     private var todoList: some View {
         List {
-            ForEach($contentViewModel.items.sorted { $0.createdDate.wrappedValue < $1.createdDate.wrappedValue }, id: \.id) { $item in
+            ForEach($contentViewModel.items.sorted { $0.createdDate.wrappedValue < $1.createdDate.wrappedValue }) { $item in
                 if showAllItems || !item.isDone {
                     TodoRow(item: $item)
                         .onTapGesture {

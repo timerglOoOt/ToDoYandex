@@ -47,6 +47,7 @@ struct TodoRow: View {
     private var taskDetails: some View {
         VStack(alignment: .leading) {
             Text(item.text)
+                .lineLimit(3)
                 .strikethrough(item.isDone, color: .gray)
                 .foregroundColor(item.isDone ? .gray : Color("textColor"))
                 .font(.system(size: 16))

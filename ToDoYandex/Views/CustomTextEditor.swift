@@ -10,7 +10,6 @@ struct CustomTextEditor: View {
                 .cornerRadius(16)
             TextEditor(text: $text)
                 .padding(8)
-
                 .frame(minHeight: 120, maxHeight: .infinity, alignment: .leading)
                 .background(Color.clear)
             if text.isEmpty {

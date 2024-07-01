@@ -6,6 +6,10 @@ final class ContentViewModel: ObservableObject {
     let fileCache: FileCache
     private var cancellable = Set<AnyCancellable>()
     private let filename: String
+
+    var doneItemsCount: Int {
+        items.filter { $0.isDone }.count
+    }
     
     init(fileCache: FileCache, filename: String) {
         self.fileCache = fileCache
