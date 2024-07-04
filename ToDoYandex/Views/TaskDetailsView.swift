@@ -24,9 +24,9 @@ struct TaskDetailsView: View {
                     verticalView
                 }
             }
-            .onTapGesture {
-                isTextEditorFocused = false
-            }
+//            .onTapGesture {
+//                isTextEditorFocused = false
+//            }
             .navigationTitle("Дело")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading: Button("Отменить") {

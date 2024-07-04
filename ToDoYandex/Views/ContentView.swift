@@ -61,6 +61,7 @@ struct ContentView: View {
         ZStack {
             CalendarSUIView()
                 .ignoresSafeArea()
+                .navigationBarTitleDisplayMode(.inline)
             VStack {
                 Spacer()
                 addButton

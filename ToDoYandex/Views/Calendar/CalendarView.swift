@@ -8,15 +8,17 @@ final class CalendarView: UIView {
     weak var delegate: CalendarViewProtocol?
 
     private lazy var dateCollection: UICollectionView = {
-        let collection = UICollectionView()
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: setDateCollectionLayout())
         collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.backgroundColor = .clear
         return collection
     }()
 
     private lazy var todoItemsTableView: UITableView = {
-        let table = UITableView()
-//        table.style = .insetGrouped
-//        table.register(nil, forCellReuseIdentifier: <#T##String#>)
+        let table = UITableView(frame: .zero, style: .insetGrouped)
+        table.backgroundColor = .clear
+        table.register(TodoItemTableViewCell.self, forCellReuseIdentifier: TodoItemTableViewCell.reuseIdentifier)
+        table.showsVerticalScrollIndicator = false
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
@@ -58,34 +60,34 @@ private extension CalendarView {
     func setupLayout() {
         backgroundColor = UIColor(named: "backgroundColor")
         
-//        addSubview(dateCollection)
+        addSubview(dateCollection)
         addSubview(todoItemsTableView)
-        addSubview(addItemButton)
+//        addSubview(addItemButton)
 
-//        setDateCollectionLayout()
 
         NSLayoutConstraint.activate([
-//            dateCollection.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-//            dateCollection.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-//            dateCollection.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            dateCollection.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            dateCollection.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            dateCollection.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            dateCollection.heightAnchor.constraint(equalToConstant: 100),
 
-//            todoItemsTableView.topAnchor.constraint(equalTo: dateCollection.bottomAnchor),
-            todoItemsTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            todoItemsTableView.topAnchor.constraint(equalTo: dateCollection.bottomAnchor),
+//            todoItemsTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             todoItemsTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             todoItemsTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             todoItemsTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
 
-            addItemButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -32),
-            addItemButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            addItemButton.heightAnchor.constraint(equalToConstant: 60),
-            addItemButton.widthAnchor.constraint(equalToConstant: 60)
+//            addItemButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -32),
+//            addItemButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+//            addItemButton.heightAnchor.constraint(equalToConstant: 60),
+//            addItemButton.widthAnchor.constraint(equalToConstant: 60)
         ])
     }
 
-    func setDateCollectionLayout() {
+    func setDateCollectionLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 60, height: 60)
         layout.minimumInteritemSpacing = 20
-        dateCollection.setCollectionViewLayout(layout, animated: true)
+        return layout
     }
 }
