@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE27CA6C2C35C4FD00E8BA39 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27CA6B2C35C4FD00E8BA39 /* CalendarView.swift */; };
+		CE27CA6E2C35D5C500E8BA39 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27CA6D2C35D5C500E8BA39 /* CalendarViewController.swift */; };
+		CE27CA702C35D6A700E8BA39 /* CalendarSUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27CA6F2C35D6A700E8BA39 /* CalendarSUIView.swift */; };
+		CE27CA722C367CB800E8BA39 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27CA712C367CB800E8BA39 /* CalendarViewModel.swift */; };
+		CE27CA742C367D9100E8BA39 /* TodoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27CA732C367D9100E8BA39 /* TodoItemTableViewCell.swift */; };
 		CE294C272C2C428000BA60F1 /* TaskDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE294C262C2C428000BA60F1 /* TaskDetailsViewModel.swift */; };
 		CE294C292C2C484D00BA60F1 /* TaskDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE294C282C2C484D00BA60F1 /* TaskDetailsView.swift */; };
 		CE294C2B2C2C623E00BA60F1 /* Date+toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE294C2A2C2C623E00BA60F1 /* Date+toString.swift */; };
@@ -46,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE27CA6B2C35C4FD00E8BA39 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		CE27CA6D2C35D5C500E8BA39 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		CE27CA6F2C35D6A700E8BA39 /* CalendarSUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSUIView.swift; sourceTree = "<group>"; };
+		CE27CA712C367CB800E8BA39 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		CE27CA732C367D9100E8BA39 /* TodoItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemTableViewCell.swift; sourceTree = "<group>"; };
 		CE294C262C2C428000BA60F1 /* TaskDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewModel.swift; sourceTree = "<group>"; };
 		CE294C282C2C484D00BA60F1 /* TaskDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsView.swift; sourceTree = "<group>"; };
 		CE294C2A2C2C623E00BA60F1 /* Date+toString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toString.swift"; sourceTree = "<group>"; };
@@ -95,11 +105,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE27CA6A2C35C48600E8BA39 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				CE27CA6B2C35C4FD00E8BA39 /* CalendarView.swift */,
+				CE27CA6D2C35D5C500E8BA39 /* CalendarViewController.swift */,
+				CE27CA732C367D9100E8BA39 /* TodoItemTableViewCell.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		CE294C252C2C426C00BA60F1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				CE294C262C2C428000BA60F1 /* TaskDetailsViewModel.swift */,
 				CEEB07FA2C2EE53400CEE8E1 /* ContentViewModel.swift */,
+				CE27CA712C367CB800E8BA39 /* CalendarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -195,10 +216,12 @@
 		CEEDC6312C2B2567008F857C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE27CA6A2C35C48600E8BA39 /* Calendar */,
 				CECEE4972C22134200F1B946 /* ContentView.swift */,
 				CEEDC6322C2B2577008F857C /* TodoRow.swift */,
 				CE294C282C2C484D00BA60F1 /* TaskDetailsView.swift */,
 				CE8FFEE72C2DE2D600CF0997 /* CustomTextEditor.swift */,
+				CE27CA6F2C35D6A700E8BA39 /* CalendarSUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,13 +356,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE27CA6E2C35D5C500E8BA39 /* CalendarViewController.swift in Sources */,
+				CE27CA6C2C35C4FD00E8BA39 /* CalendarView.swift in Sources */,
 				CE8FFEE82C2DE2D600CF0997 /* CustomTextEditor.swift in Sources */,
 				CEEB07FB2C2EE53400CEE8E1 /* ContentViewModel.swift in Sources */,
 				CECEE4C62C221FDC00F1B946 /* TodoItem+CsvParser.swift in Sources */,
 				CE294C2B2C2C623E00BA60F1 /* Date+toString.swift in Sources */,
+				CE27CA722C367CB800E8BA39 /* CalendarViewModel.swift in Sources */,
+				CE27CA702C35D6A700E8BA39 /* CalendarSUIView.swift in Sources */,
 				CEDE565F2C25631F00E8BC21 /* TodoItem+Equatable.swift in Sources */,
 				CE294C272C2C428000BA60F1 /* TaskDetailsViewModel.swift in Sources */,
 				CE294C292C2C484D00BA60F1 /* TaskDetailsView.swift in Sources */,
+				CE27CA742C367D9100E8BA39 /* TodoItemTableViewCell.swift in Sources */,
 				CEEB07FD2C2F9BB000CEE8E1 /* Color+Hex.swift in Sources */,
 				CE4BC9102C260AFA00C5A166 /* FileCache.swift in Sources */,
 				CECEE4982C22134200F1B946 /* ContentView.swift in Sources */,

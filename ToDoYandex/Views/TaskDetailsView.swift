@@ -23,12 +23,12 @@ struct TaskDetailsView: View {
                 } else {
                     verticalView
                 }
-            }.onTapGesture {
+            }
+            .onTapGesture {
                 isTextEditorFocused = false
             }
             .navigationTitle("Дело")
             .navigationBarTitleDisplayMode(.inline)
-//            .navigationBarTitle("Дело", displayMode: .inline)
             .navigationBarItems(leading: Button("Отменить") {
                 dismiss()
             }, trailing: Button("Сохранить") {
@@ -106,11 +106,6 @@ struct TaskDetailsView: View {
             CustomTextEditor(text: $taskDetailsViewModel.taskText, placeholder: "Что надо сделать?")
                 .focused($isTextEditorFocused)
                 .padding(.horizontal)
-                .onTapGesture {
-                    withAnimation {
-                        isExpanded = true
-                    }
-                }
             controlsView
                 .padding()
                 .background(Color("detailColor"))
@@ -129,14 +124,15 @@ struct TaskDetailsView: View {
                     .padding(.horizontal)
                 Spacer()
                 Picker("Priority", selection: $taskDetailsViewModel.priority) {
-                    Text("↓").tag(Priority.low)
+                    Text("\u{2193}").tag(Priority.low)
                     Text("нет").tag(Priority.normal)
-                    Text("‼️").tag(Priority.high)
+                    Text("\u{203C}").tag(Priority.high)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .frame(width: 140)
                 .padding(.horizontal)
             }
+
 
             Divider()
             VStack {

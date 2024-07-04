@@ -36,6 +36,14 @@ struct ContentView: View {
                 }
 
                 .navigationTitle("Мои дела")
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: calendar) {
+                           Image(systemName: "calendar")
+                               .imageScale(.large)
+                       }
+                   }
+                }
                 .sheet(isPresented: $isOpened) {
                     TaskDetailsView(
                         taskDetailsViewModel: TaskDetailsViewModel(
@@ -47,6 +55,17 @@ struct ContentView: View {
             .background(Color("backgroundColor"))
         }
         .scrollContentBackground(.hidden)
+    }
+
+    private var calendar: some View {
+        ZStack {
+            CalendarSUIView()
+                .ignoresSafeArea()
+            VStack {
+                Spacer()
+                addButton
+            }
+        }
     }
 
     private var todoList: some View {
