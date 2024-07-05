@@ -140,21 +140,8 @@ struct TaskDetailsView: View {
             HStack {
                 Text("Категория")
                 Spacer()
-                Picker("Категория", selection: $taskDetailsViewModel.category) {
-                    ForEach(TodoItemCategory.allCases) { category in
-                        HStack {
-                            Text(category.rawValue)
-                            Spacer()
-                            Text("dd")
-                            Circle()
-                                .fill(Color(category.color))
-                                .frame(width: 20, height: 20)
+                categoriesPicker
 
-                        }
-                        .tag(category)
-                    }
-                }
-                .pickerStyle(.menu)
             }
             .padding(.horizontal)
 
@@ -168,7 +155,7 @@ struct TaskDetailsView: View {
                         .cornerRadius(8)
                 }
             }
-                .padding(.horizontal)
+            .padding(.horizontal)
 
             Divider()
 
@@ -205,6 +192,20 @@ struct TaskDetailsView: View {
                     .datePickerStyle(GraphicalDatePickerStyle())
                     .padding(.horizontal)
                     .environment(\.locale, Locale.init(identifier: "ru"))
+            }
+        }
+    }
+
+    var categoriesPicker: some View {
+        Picker("Категория", selection: $taskDetailsViewModel.category) {
+            ForEach(TodoItemCategory.allCases) { category in
+                HStack {
+                    Text(category.rawValue)
+                    Image(systemName: "circle.fill")
+                        .symbolRenderingMode(.palette)
+                        .foregroundColor(Color(category.color))
+                }
+                .tag(category)
             }
         }
     }

@@ -6,7 +6,8 @@ extension TodoItem {
             "id": id,
             "text": text,
             "isDone": isDone,
-            "createdDate": ISO8601DateFormatter().string(from: createdDate)
+            "createdDate": ISO8601DateFormatter().string(from: createdDate),
+            "category": category.rawValue
         ]
 
         if priority != .normal {
@@ -44,11 +45,14 @@ extension TodoItem {
         guard let id = jsonObject["id"] as? String,
               let text = jsonObject["text"] as? String,
               let isDone = jsonObject["isDone"] as? Bool,
+              let categoryString = jsonObject["category"] as? String,
               let createdDateString = jsonObject["createdDate"] as? String,
               let createdDate = ISO8601DateFormatter().date(from: createdDateString) else { return nil }
 
         let priorityString = jsonObject["priority"] as? String ?? "Обычное"
         guard let priority = Priority(rawValue: priorityString) else { return nil }
+
+        let category = TodoItemCategory(rawValue: categoryString) ?? .none
 
         var deadline: Date? = nil
         if let deadlineString = jsonObject["deadline"] as? String {
@@ -60,6 +64,6 @@ extension TodoItem {
             modifiedDate = ISO8601DateFormatter().date(from: modifiedDateString)
         }
 
-        return TodoItem(id: id, text: text, priority: priority, deadline: deadline, isDone: isDone, createdDate: createdDate, modifiedDate: modifiedDate)
+        return TodoItem(id: id, text: text, priority: priority, deadline: deadline, isDone: isDone, createdDate: createdDate, modifiedDate: modifiedDate, category: category)
     }
 }

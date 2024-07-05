@@ -34,7 +34,6 @@ struct ContentView: View {
                     Spacer()
                     addButton
                 }
-
                 .navigationTitle("Мои дела")
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -51,6 +50,9 @@ struct ContentView: View {
                         )
                     )
                 }
+            }
+            .onDisappear {
+                contentViewModel.saveItems()
             }
             .background(Color("backgroundColor"))
         }
@@ -81,7 +83,7 @@ struct ContentView: View {
                         .swipeActions(edge: .leading) {
                             Button(action: {
                                 item.isDone.toggle()
-//                                contentViewModel.updateItemStatus(id: item.id)
+                                contentViewModel.updateItemStatus(id: item.id)
                             }) {
                                 Image(systemName: "checkmark.circle")
                             }

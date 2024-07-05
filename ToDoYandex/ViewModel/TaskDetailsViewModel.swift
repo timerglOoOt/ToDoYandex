@@ -37,6 +37,7 @@ final class TaskDetailsViewModel: ObservableObject {
         guard let item = fileCache.getItem(by: id) else { return }
         taskText = item.text
         priority = item.priority
+        category = item.category
         if let itemHexColor = item.hexColor {
             hexColor = itemHexColor
         }

@@ -1,16 +1,12 @@
 import UIKit
 
-protocol CalendarViewProtocol: AnyObject {
-    func showTaskDetailsView()
-}
-
 final class CalendarView: UIView {
-    weak var delegate: CalendarViewProtocol?
-
     lazy var dateCollection: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: setDateCollectionLayout())
-        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.register(ItemDateCollectionViewCell.self, forCellWithReuseIdentifier: ItemDateCollectionViewCell.reuseIdentifier)
         collection.backgroundColor = .clear
+        collection.showsHorizontalScrollIndicator = false
+        collection.translatesAutoresizingMaskIntoConstraints = false
         return collection
     }()
 
@@ -22,27 +18,6 @@ final class CalendarView: UIView {
         table.showsVerticalScrollIndicator = false
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
-    }()
-
-    private lazy var addItemButton: UIButton = {
-        let button = UIButton(type: .infoLight)
-        button.layer.cornerRadius = 30
-        button.setImage(UIImage(systemName: "plus"), for: .normal)
-        button.backgroundColor = .systemBlue
-        button.tintColor = .white
-
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOpacity = 0.3
-        button.layer.shadowOffset = CGSize(width: 0, height: 3)
-        button.layer.shadowRadius = 3
-
-        button.addAction(UIAction { [weak self] _ in
-            self?.delegate?.showTaskDetailsView()
-        }, for: .touchUpInside)
-
-        button.translatesAutoresizingMaskIntoConstraints = false
-
-        return button
     }()
 
     override init(frame: CGRect) {
@@ -67,8 +42,8 @@ private extension CalendarView {
 
         NSLayoutConstraint.activate([
             dateCollection.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            dateCollection.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            dateCollection.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            dateCollection.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 8),
+            dateCollection.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -8),
             dateCollection.heightAnchor.constraint(equalToConstant: 70),
 
             todoItemsTableView.topAnchor.constraint(equalTo: dateCollection.bottomAnchor),
@@ -80,15 +55,9 @@ private extension CalendarView {
 
     func setDateCollectionLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 60, height: 60)
-        layout.minimumInteritemSpacing = 20
+        layout.itemSize = CGSize(width: 66, height: 60)
+        layout.minimumLineSpacing = 8
+        layout.scrollDirection = .horizontal
         return layout
     }
-}
-
-extension CalendarView {
-//    func setupTodoItemsTableView(vc: UIViewController) {
-//        todoItemsTableView.dataSource = vc
-//        todoItemsTableView.delegate = vc
-//    }
 }

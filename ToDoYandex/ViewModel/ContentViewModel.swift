@@ -24,9 +24,7 @@ final class ContentViewModel: ObservableObject {
     }
 
     func updateItemStatus(id: String) {
-        if var item = fileCache.getItem(by: id) {
-            item.isDone.toggle()
-        }
+        fileCache.updateItemStatus(id: id)
     }
 
     func addTodoItem(_ item: TodoItem) {
@@ -35,6 +33,12 @@ final class ContentViewModel: ObservableObject {
 
     func deleteTodoItem(by id: String) {
         fileCache.deleteItem(byId: id)
+    }
+
+    func saveItems() {
+        Task {
+            try await fileCache.save(to: filename)
+        }
     }
 }
 
