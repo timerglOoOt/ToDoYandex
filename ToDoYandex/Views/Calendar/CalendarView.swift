@@ -7,17 +7,18 @@ protocol CalendarViewProtocol: AnyObject {
 final class CalendarView: UIView {
     weak var delegate: CalendarViewProtocol?
 
-    private lazy var dateCollection: UICollectionView = {
+    lazy var dateCollection: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: setDateCollectionLayout())
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.backgroundColor = .clear
         return collection
     }()
 
-    private lazy var todoItemsTableView: UITableView = {
+    lazy var todoItemsTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
         table.backgroundColor = .clear
         table.register(TodoItemTableViewCell.self, forCellReuseIdentifier: TodoItemTableViewCell.reuseIdentifier)
+        table.rowHeight = 50
         table.showsVerticalScrollIndicator = false
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
@@ -62,25 +63,18 @@ private extension CalendarView {
         
         addSubview(dateCollection)
         addSubview(todoItemsTableView)
-//        addSubview(addItemButton)
 
 
         NSLayoutConstraint.activate([
             dateCollection.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             dateCollection.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             dateCollection.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            dateCollection.heightAnchor.constraint(equalToConstant: 100),
+            dateCollection.heightAnchor.constraint(equalToConstant: 70),
 
             todoItemsTableView.topAnchor.constraint(equalTo: dateCollection.bottomAnchor),
-//            todoItemsTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             todoItemsTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             todoItemsTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            todoItemsTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-
-//            addItemButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -32),
-//            addItemButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-//            addItemButton.heightAnchor.constraint(equalToConstant: 60),
-//            addItemButton.widthAnchor.constraint(equalToConstant: 60)
+            todoItemsTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 
@@ -90,4 +84,11 @@ private extension CalendarView {
         layout.minimumInteritemSpacing = 20
         return layout
     }
+}
+
+extension CalendarView {
+//    func setupTodoItemsTableView(vc: UIViewController) {
+//        todoItemsTableView.dataSource = vc
+//        todoItemsTableView.delegate = vc
+//    }
 }

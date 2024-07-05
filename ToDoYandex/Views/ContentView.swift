@@ -59,7 +59,7 @@ struct ContentView: View {
 
     private var calendar: some View {
         ZStack {
-            CalendarSUIView()
+            CalendarSUIView(viewModel: contentViewModel)
                 .ignoresSafeArea()
                 .navigationBarTitleDisplayMode(.inline)
             VStack {

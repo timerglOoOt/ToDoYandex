@@ -11,12 +11,12 @@ final class TodoItemTableViewCell: UITableViewCell {
 
     private lazy var categoryIndicator: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = 9
         view.backgroundColor = .clear
         view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 0.3
-        view.layer.shadowOffset = CGSize(width: 0, height: 2)
-        view.layer.shadowRadius = 2
+        view.layer.shadowOpacity = 0.4
+        view.layer.shadowOffset = CGSize(width: 0, height: 4)
+        view.layer.shadowRadius = 3
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -36,20 +36,19 @@ final class TodoItemTableViewCell: UITableViewCell {
 extension TodoItemTableViewCell {
     private func setupLayout() {
         contentView.backgroundColor = UIColor(named: "detailColor")
-//        contentView.layer.cornerRadius = 16
 
         contentView.addSubview(itemTextLabel)
         contentView.addSubview(categoryIndicator)
 
         NSLayoutConstraint.activate([
             itemTextLabel.centerYAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.centerYAnchor),
-            itemTextLabel.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 8),
+            itemTextLabel.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             itemTextLabel.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -24),
 
             categoryIndicator.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            categoryIndicator.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            categoryIndicator.widthAnchor.constraint(equalToConstant: 20),
-            categoryIndicator.heightAnchor.constraint(equalToConstant: 20)
+            categoryIndicator.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            categoryIndicator.widthAnchor.constraint(equalToConstant: 18),
+            categoryIndicator.heightAnchor.constraint(equalToConstant: 18)
         ])
     }
 
@@ -67,11 +66,12 @@ extension TodoItemTableViewCell {
                 attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue]
             )
             itemTextLabel.attributedText = attributedText
-        } else {
-            itemTextLabel.textColor = .black
-            let attributedText = NSAttributedString(string: itemTextLabel.text ?? "")
-            itemTextLabel.attributedText = attributedText
         }
+//        else {
+//            itemTextLabel.textColor = .black
+//            let attributedText = NSAttributedString(string: itemTextLabel.text ?? "")
+//            itemTextLabel.attributedText = attributedText
+//        }
     }
 
     static var reuseIdentifier: String {

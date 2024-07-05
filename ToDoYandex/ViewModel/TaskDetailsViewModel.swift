@@ -8,6 +8,7 @@ final class TaskDetailsViewModel: ObservableObject {
     @Published var deadlineEnabled: Bool = false
     @Published var deadline: Date = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
     @Published var hexColor: String = ""
+    @Published var category: TodoItemCategory = .none
     let id: String
 
     init(fileCache: FileCache, id: String) {

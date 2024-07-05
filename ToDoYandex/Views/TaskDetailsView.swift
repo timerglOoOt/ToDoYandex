@@ -8,6 +8,7 @@ struct TaskDetailsView: View {
 
     @State private var isExpanded = false
     @State var showingEmptyTextAlert = false
+    @State var showingCalendar = false
     @State var color = Color.clear
     @FocusState private var isTextEditorFocused: Bool
 
@@ -42,7 +43,8 @@ struct TaskDetailsView: View {
                         deadline: taskDetailsViewModel.deadlineEnabled ?  taskDetailsViewModel.deadline : nil,
                         isDone: false,
                         createdDate: .now,
-                        hexColor: color.toHex()
+                        hexColor: color.toHex(),
+                        category: taskDetailsViewModel.category
                     )
                     taskDetailsViewModel.addTodoItem(item)
                     dismiss()
@@ -128,13 +130,36 @@ struct TaskDetailsView: View {
                     Text("нет").tag(Priority.normal)
                     Text("\u{203C}").tag(Priority.high)
                 }
-                .pickerStyle(SegmentedPickerStyle())
+                .pickerStyle(.segmented)
                 .frame(width: 140)
                 .padding(.horizontal)
             }
 
+            Divider()
+
+            HStack {
+                Text("Категория")
+                Spacer()
+                Picker("Категория", selection: $taskDetailsViewModel.category) {
+                    ForEach(TodoItemCategory.allCases) { category in
+                        HStack {
+                            Text(category.rawValue)
+                            Spacer()
+                            Text("dd")
+                            Circle()
+                                .fill(Color(category.color))
+                                .frame(width: 20, height: 20)
+
+                        }
+                        .tag(category)
+                    }
+                }
+                .pickerStyle(.menu)
+            }
+            .padding(.horizontal)
 
             Divider()
+
             VStack {
                 ColorPicker(selection: $color) {
                     Text(color.toHex())
@@ -147,20 +172,35 @@ struct TaskDetailsView: View {
 
             Divider()
 
-            Toggle(isOn: $taskDetailsViewModel.deadlineEnabled) {
-                Text("Сделать до")
-                if taskDetailsViewModel.deadlineEnabled {
-                    Text(taskDetailsViewModel.deadline.toString(with: "dd MMMM yyyy"))
-                        .foregroundColor(.blue)
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Сделать до")
+                    if taskDetailsViewModel.deadlineEnabled {
+                        Text(taskDetailsViewModel.deadline.toString(with: "dd MMMM yyyy"))
+                            .font(.system(size: 14, weight: .medium))
+                            .foregroundColor(.blue)
+                            .onTapGesture {
+                                withAnimation(.easeIn(duration: 0.4)) {
+                                    if taskDetailsViewModel.deadlineEnabled {
+                                        showingCalendar.toggle()
+                                    }
+                                }
+                            }
+                    }
                 }
-            }.onTapGesture {
-                withAnimation(.easeIn(duration: 0.4)) {
-                    taskDetailsViewModel.deadlineEnabled.toggle()
+                .padding(.horizontal)
+                Spacer()
+                Toggle(isOn: $taskDetailsViewModel.deadlineEnabled) {
+                }.onTapGesture {
+                    withAnimation(.easeIn(duration: 0.4)) {
+                        taskDetailsViewModel.deadlineEnabled.toggle()
+                        showingCalendar = false
+                    }
                 }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
 
-            if taskDetailsViewModel.deadlineEnabled {
+            if showingCalendar {
                 DatePicker("", selection: $taskDetailsViewModel.deadline, in: Date.now..., displayedComponents: .date)
                     .datePickerStyle(GraphicalDatePickerStyle())
                     .padding(.horizontal)

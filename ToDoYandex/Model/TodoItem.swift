@@ -7,15 +7,20 @@ enum Priority: String {
     case high = "Важное"
 }
 
-enum TodoItemCategory {
-    case none, work, study, hobby
+enum TodoItemCategory: String, CaseIterable, Identifiable {
+    case work = "Работа"
+    case study = "Учеба"
+    case hobby = "Хобби"
+    case none = "Другое"
 
+    var id: Self { self }
+    
     var color: UIColor {
         switch self {
         case .none: return .clear
-        case .work: return .red
-        case .study: return .blue
-        case .hobby: return .green
+        case .work: return .systemRed
+        case .study: return .systemBlue
+        case .hobby: return .systemGreen
         }
     }
 }
