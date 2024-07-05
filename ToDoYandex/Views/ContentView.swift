@@ -5,6 +5,7 @@ struct ContentView: View {
     @State var isOpened = false
     @State var itemId = ""
     @State var showAllItems = true
+    @State private var showingCustomCategory = false
 
     init(contentViewModel: ContentViewModel) {
         self.contentViewModel = contentViewModel
@@ -34,8 +35,24 @@ struct ContentView: View {
                     Spacer()
                     addButton
                 }
-
                 .navigationTitle("Мои дела")
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: calendar) {
+                           Image(systemName: "calendar")
+                               .imageScale(.large)
+                       }
+                   }
+
+                    ToolbarItem(placement: .navigationBarLeading) {
+                       Image(systemName: "plus")
+                           .imageScale(.large)
+                           .foregroundColor(.blue)
+                           .onTapGesture {
+                               showingCustomCategory.toggle()
+                           }
+                    }
+                }
                 .sheet(isPresented: $isOpened) {
                     TaskDetailsView(
                         taskDetailsViewModel: TaskDetailsViewModel(
@@ -43,10 +60,28 @@ struct ContentView: View {
                         )
                     )
                 }
+                .sheet(isPresented: $showingCustomCategory) {
+                    CustomCategoryView()
+                }
+            }
+            .onDisappear {
+                contentViewModel.saveItems()
             }
             .background(Color("backgroundColor"))
         }
         .scrollContentBackground(.hidden)
+    }
+
+    private var calendar: some View {
+        ZStack {
+            CalendarSUIView(viewModel: contentViewModel)
+                .ignoresSafeArea()
+                .navigationBarTitleDisplayMode(.inline)
+            VStack {
+                Spacer()
+                addButton
+            }
+        }
     }
 
     private var todoList: some View {
@@ -61,7 +96,7 @@ struct ContentView: View {
                         .swipeActions(edge: .leading) {
                             Button(action: {
                                 item.isDone.toggle()
-//                                contentViewModel.updateItemStatus(id: item.id)
+                                contentViewModel.updateItemStatus(id: item.id)
                             }) {
                                 Image(systemName: "checkmark.circle")
                             }

@@ -70,6 +70,12 @@ final class FileCache: ObservableObject {
         let id = item.id
         items[id] = item
     }
+
+    func updateItemStatus(id: String) {
+        if isItemExist(by: id) {
+            items[id]?.isDone.toggle()
+        }
+    }
 }
 
 private extension FileCache {

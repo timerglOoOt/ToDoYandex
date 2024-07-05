@@ -1,4 +1,6 @@
 import Foundation
+import SwiftUI
+import UIKit
 
 enum Priority: String {
     case low = "Неважное"
@@ -15,10 +17,11 @@ struct TodoItem: Identifiable {
     var createdDate: Date
     let modifiedDate: Date?
     var hexColor: String?
+    var category: TodoItemCategory
 
     // MARK: Добавил конструктор, чтобы можно было избежать опциональные поля при инициализации
 
-    init(id: String = UUID().uuidString, text: String, priority: Priority, deadline: Date? = nil, isDone: Bool = false, createdDate: Date = Date(), modifiedDate: Date? = nil, hexColor: String? = nil) {
+    init(id: String = UUID().uuidString, text: String, priority: Priority, deadline: Date? = nil, isDone: Bool = false, createdDate: Date = Date(), modifiedDate: Date? = nil, hexColor: String? = nil, category: TodoItemCategory = .none) {
         self.id = id
         self.text = text
         self.priority = priority
@@ -27,6 +30,7 @@ struct TodoItem: Identifiable {
         self.createdDate = createdDate
         self.modifiedDate = modifiedDate
         self.hexColor = hexColor
+        self.category = category
     }
 }
 
