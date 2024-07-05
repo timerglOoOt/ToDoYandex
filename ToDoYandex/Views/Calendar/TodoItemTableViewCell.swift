@@ -60,19 +60,19 @@ extension TodoItemTableViewCell {
 
     func updateTaskAppearance(isDone: Bool) {
         itemTextLabel.textColor = isDone ? .gray : UIColor(named: "textColor")
-//        if isDone {
-//            itemTextLabel.textColor = .gray
-//            let attributedText = NSAttributedString(
-//                string: itemTextLabel.text ?? "",
-//                attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue]
-//            )
-//            itemTextLabel.attributedText = attributedText
-//        }
-//        else {
-//            itemTextLabel.textColor = UIColor(named: "textColor")
-//            let attributedText = NSAttributedString(string: itemTextLabel.text ?? "", attributes: nil)
-//            itemTextLabel.attributedText = attributedText
-//        }
+        if isDone {
+            itemTextLabel.textColor = .gray
+            let attributedText = NSAttributedString(
+                string: itemTextLabel.text ?? "",
+                attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue]
+            )
+            itemTextLabel.attributedText = attributedText
+        }
+        else {
+            itemTextLabel.textColor = UIColor(named: "textColor")
+            let attributedText = NSAttributedString(string: itemTextLabel.text ?? "", attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single])
+            itemTextLabel.attributedText = attributedText
+        }
     }
 
     static var reuseIdentifier: String {

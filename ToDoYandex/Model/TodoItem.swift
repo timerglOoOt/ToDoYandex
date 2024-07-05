@@ -1,28 +1,11 @@
 import Foundation
+import SwiftUI
 import UIKit
 
 enum Priority: String {
     case low = "Неважное"
     case normal = "Обычное"
     case high = "Важное"
-}
-
-enum TodoItemCategory: String, CaseIterable, Identifiable {
-    case work = "Работа"
-    case study = "Учеба"
-    case hobby = "Хобби"
-    case none = "Другое"
-
-    var id: Self { self }
-    
-    var color: UIColor {
-        switch self {
-        case .none: return .clear
-        case .work: return .systemRed
-        case .study: return .systemBlue
-        case .hobby: return .systemGreen
-        }
-    }
 }
 
 struct TodoItem: Identifiable {

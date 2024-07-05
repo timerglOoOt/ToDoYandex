@@ -25,9 +25,13 @@ struct TaskDetailsView: View {
                     verticalView
                 }
             }
-//            .onTapGesture {
-//                isTextEditorFocused = false
-//            }
+            .toolbar {
+                ToolbarItem(placement: .keyboard) {
+                    Button("Готово") {
+                        isTextEditorFocused = false
+                    }
+                }
+            }
             .navigationTitle("Дело")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading: Button("Отменить") {
@@ -121,72 +125,13 @@ struct TaskDetailsView: View {
 
     private var controlsView: some View {
         VStack {
-            HStack {
-                Text("Важность")
-                    .padding(.horizontal)
-                Spacer()
-                Picker("Priority", selection: $taskDetailsViewModel.priority) {
-                    Text("\u{2193}").tag(Priority.low)
-                    Text("нет").tag(Priority.normal)
-                    Text("\u{203C}").tag(Priority.high)
-                }
-                .pickerStyle(.segmented)
-                .frame(width: 140)
-                .padding(.horizontal)
-            }
-
+            priorityPicker
             Divider()
-
-            HStack {
-                Text("Категория")
-                Spacer()
-                categoriesPicker
-
-            }
-            .padding(.horizontal)
-
+            categoryPicker
             Divider()
-
-            VStack {
-                ColorPicker(selection: $color) {
-                    Text(color.toHex())
-                        .padding(.horizontal, 6)
-                        .background(Color(uiColor: UIColor.systemGray4))
-                        .cornerRadius(8)
-                }
-            }
-            .padding(.horizontal)
-
+            colorPicker
             Divider()
-
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Сделать до")
-                    if taskDetailsViewModel.deadlineEnabled {
-                        Text(taskDetailsViewModel.deadline.toString(with: "dd MMMM yyyy"))
-                            .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.blue)
-                            .onTapGesture {
-                                withAnimation(.easeIn(duration: 0.4)) {
-                                    if taskDetailsViewModel.deadlineEnabled {
-                                        showingCalendar.toggle()
-                                    }
-                                }
-                            }
-                    }
-                }
-                .padding(.horizontal)
-                Spacer()
-                Toggle(isOn: $taskDetailsViewModel.deadlineEnabled) {
-                }.onTapGesture {
-                    withAnimation(.easeIn(duration: 0.4)) {
-                        taskDetailsViewModel.deadlineEnabled.toggle()
-                        showingCalendar = false
-                    }
-                }
-                .padding(.horizontal)
-            }
-
+            deadlineToggle
             if showingCalendar {
                 DatePicker("", selection: $taskDetailsViewModel.deadline, in: Date.now..., displayedComponents: .date)
                     .datePickerStyle(GraphicalDatePickerStyle())
@@ -196,17 +141,82 @@ struct TaskDetailsView: View {
         }
     }
 
-    var categoriesPicker: some View {
-        Picker("Категория", selection: $taskDetailsViewModel.category) {
-            ForEach(TodoItemCategory.allCases) { category in
-                HStack {
-                    Text(category.rawValue)
-                    Image(systemName: "circle.fill")
-                        .symbolRenderingMode(.palette)
-                        .foregroundColor(Color(category.color))
-                }
-                .tag(category)
+    private var priorityPicker: some View {
+        HStack {
+            Text("Важность")
+                .padding(.horizontal)
+            Spacer()
+            Picker("Priority", selection: $taskDetailsViewModel.priority) {
+                Text("\u{2193}").tag(Priority.low)
+                Text("нет").tag(Priority.normal)
+                Text("\u{203C}").tag(Priority.high)
             }
+            .pickerStyle(.segmented)
+            .frame(width: 140)
+            .padding(.horizontal)
+        }
+    }
+
+    private var categoryPicker: some View {
+        HStack {
+            Text("Категория")
+            Spacer()
+            Picker("Категория", selection: $taskDetailsViewModel.category) {
+                ForEach(TodoItemCategory.allCases) { category in
+//                    HStack {
+                        Text(category.name)
+                            .foregroundStyle(Color(category.color))
+//                        FIXME: Все кружки одного цвета
+//                        Image(systemName: "circle.fill")
+//                            .symbolRenderingMode(.palette)
+//                            .foregroundColor(Color(category.color))
+//                    }
+                            .tag(category)
+                }
+            }
+        }
+        .padding(.horizontal)
+    }
+
+    private var colorPicker: some View {
+        VStack {
+            ColorPicker(selection: $color) {
+                Text(color.toHex())
+                    .padding(.horizontal, 6)
+                    .background(Color(uiColor: UIColor.systemGray4))
+                    .cornerRadius(8)
+            }
+        }
+        .padding(.horizontal)
+    }
+
+    private var deadlineToggle: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Сделать до")
+                if taskDetailsViewModel.deadlineEnabled {
+                    Text(taskDetailsViewModel.deadline.toString(with: "dd MMMM yyyy"))
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundColor(.blue)
+                        .onTapGesture {
+                            withAnimation(.easeIn(duration: 0.4)) {
+                                if taskDetailsViewModel.deadlineEnabled {
+                                    showingCalendar.toggle()
+                                }
+                            }
+                        }
+                }
+            }
+            .padding(.horizontal)
+            Spacer()
+            Toggle(isOn: $taskDetailsViewModel.deadlineEnabled) {
+            }.onTapGesture {
+                withAnimation(.easeIn(duration: 0.4)) {
+                    taskDetailsViewModel.deadlineEnabled.toggle()
+                    showingCalendar = false
+                }
+            }
+            .padding(.horizontal)
         }
     }
 }

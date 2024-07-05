@@ -5,6 +5,7 @@ struct ContentView: View {
     @State var isOpened = false
     @State var itemId = ""
     @State var showAllItems = true
+    @State private var showingCustomCategory = false
 
     init(contentViewModel: ContentViewModel) {
         self.contentViewModel = contentViewModel
@@ -42,6 +43,15 @@ struct ContentView: View {
                                .imageScale(.large)
                        }
                    }
+
+                    ToolbarItem(placement: .navigationBarLeading) {
+                       Image(systemName: "plus")
+                           .imageScale(.large)
+                           .foregroundColor(.blue)
+                           .onTapGesture {
+                               showingCustomCategory.toggle()
+                           }
+                    }
                 }
                 .sheet(isPresented: $isOpened) {
                     TaskDetailsView(
@@ -49,6 +59,9 @@ struct ContentView: View {
                             fileCache: contentViewModel.fileCache, id: itemId
                         )
                     )
+                }
+                .sheet(isPresented: $showingCustomCategory) {
+                    CustomCategoryView()
                 }
             }
             .onDisappear {
