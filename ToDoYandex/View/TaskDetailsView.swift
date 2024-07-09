@@ -44,7 +44,7 @@ struct TaskDetailsView: View {
                         id: taskDetailsViewModel.id,
                         text: taskDetailsViewModel.taskText,
                         priority: taskDetailsViewModel.priority,
-                        deadline: taskDetailsViewModel.deadlineEnabled ?  taskDetailsViewModel.deadline : nil,
+                        deadline: taskDetailsViewModel.deadlineEnabled ? taskDetailsViewModel.deadline : nil,
                         isDone: false,
                         createdDate: .now,
                         hexColor: color.toHex(),
@@ -195,7 +195,11 @@ struct TaskDetailsView: View {
             VStack(alignment: .leading) {
                 Text("Сделать до")
                 if taskDetailsViewModel.deadlineEnabled {
-                    Text(taskDetailsViewModel.deadline.toString(with: "dd MMMM yyyy"))
+                    Text(taskDetailsViewModel.deadline.toString(
+                        with:
+                            Constant.DateFormate.dayWithFullMonthAndYear.rawValue
+                        )
+                    )
                         .font(.system(size: 14, weight: .medium))
                         .foregroundColor(.blue)
                         .onTapGesture {

@@ -13,15 +13,25 @@ struct TodoItem: Identifiable {
     let text: String
     let priority: Priority
     let deadline: Date?
-    var isDone: Bool
-    var createdDate: Date
+    let isDone: Bool
+    let createdDate: Date
     let modifiedDate: Date?
-    var hexColor: String?
-    var category: TodoItemCategory
+    let hexColor: String?
+    let category: TodoItemCategory
 
     // MARK: Добавил конструктор, чтобы можно было избежать опциональные поля при инициализации
 
-    init(id: String = UUID().uuidString, text: String, priority: Priority, deadline: Date? = nil, isDone: Bool = false, createdDate: Date = Date(), modifiedDate: Date? = nil, hexColor: String? = nil, category: TodoItemCategory = .none) {
+    init(
+        id: String = UUID().uuidString,
+        text: String,
+        priority: Priority,
+        deadline: Date? = nil,
+        isDone: Bool = false,
+        createdDate: Date = Date(),
+        modifiedDate: Date? = nil,
+        hexColor: String? = nil,
+        category: TodoItemCategory = .none
+    ) {
         self.id = id
         self.text = text
         self.priority = priority

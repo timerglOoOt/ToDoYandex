@@ -73,7 +73,7 @@ final class FileCache: ObservableObject {
 
     func updateItemStatus(id: String) {
         if isItemExist(by: id) {
-            items[id]?.isDone.toggle()
+            items[id] = updateStatus(items[id])
         }
     }
 }
@@ -88,7 +88,7 @@ private extension FileCache {
         return paths[0]
     }
 
-    private func getFilePath(for filename: String) throws -> URL {
+    func getFilePath(for filename: String) throws -> URL {
         if let filePathString = fileTable[filename],
            let filePath = URL(string: filePathString) {
             return filePath
@@ -97,5 +97,20 @@ private extension FileCache {
         let filePath = getDocumentsDirectory().appendingPathComponent(filename)
         fileTable[filename] = filePath.absoluteString
         return filePath
+    }
+
+    func updateStatus(_ item: TodoItem?) -> TodoItem? {
+        guard let item else { return nil }
+        return TodoItem(
+            id: item.id,
+            text: item.text,
+            priority: item.priority,
+            deadline: item.deadline,
+            isDone: !item.isDone,
+            createdDate: item.createdDate,
+            modifiedDate: item.modifiedDate,
+            hexColor: item.hexColor,
+            category: item.category
+        )
     }
 }

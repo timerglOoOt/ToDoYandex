@@ -3,7 +3,10 @@ import UIKit
 final class CalendarView: UIView {
     lazy var dateCollection: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: setDateCollectionLayout())
-        collection.register(ItemDateCollectionViewCell.self, forCellWithReuseIdentifier: ItemDateCollectionViewCell.reuseIdentifier)
+        collection.register(
+            ItemDateCollectionViewCell.self,
+            forCellWithReuseIdentifier: ItemDateCollectionViewCell.reuseIdentifier
+        )
         collection.backgroundColor = .clear
         collection.showsHorizontalScrollIndicator = false
         collection.translatesAutoresizingMaskIntoConstraints = false
@@ -13,7 +16,10 @@ final class CalendarView: UIView {
     lazy var todoItemsTableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
         table.backgroundColor = .clear
-        table.register(TodoItemTableViewCell.self, forCellReuseIdentifier: TodoItemTableViewCell.reuseIdentifier)
+        table.register(
+            TodoItemTableViewCell.self,
+            forCellReuseIdentifier: TodoItemTableViewCell.reuseIdentifier
+        )
         table.rowHeight = 50
         table.showsVerticalScrollIndicator = false
         table.translatesAutoresizingMaskIntoConstraints = false

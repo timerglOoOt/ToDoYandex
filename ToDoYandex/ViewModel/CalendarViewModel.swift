@@ -42,8 +42,11 @@ extension CalendarViewModel {
 
 
     func configureCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TodoItemTableViewCell.reuseIdentifier, for: indexPath) as? TodoItemTableViewCell
-        guard let cell = cell else { return UITableViewCell() }
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: TodoItemTableViewCell.reuseIdentifier,
+            for: indexPath
+        ) as? TodoItemTableViewCell
+        guard let cell else { return UITableViewCell() }
         let date = dates[indexPath.section]
         if let item = itemsByDate[date]?[indexPath.row] {
             cell.configure(with: item)
@@ -98,8 +101,11 @@ extension CalendarViewModel {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemDateCollectionViewCell.reuseIdentifier, for: indexPath) as? ItemDateCollectionViewCell
-        guard let cell = cell else { return UICollectionViewCell() }
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: ItemDateCollectionViewCell.reuseIdentifier,
+            for: indexPath
+        ) as? ItemDateCollectionViewCell
+        guard let cell else { return UICollectionViewCell() }
         cell.configure(with: dates[indexPath.row])
         
         return cell
@@ -121,7 +127,10 @@ private extension CalendarViewModel {
     func updateItemsByDateAndDates(items: [TodoItem]) {
         self.dates = []
         let dates = items.map { $0.deadline ?? infinity }.sorted { $0 < $1 }
-        let stringDates = dates.map { $0 != infinity ? $0.toString(with: "dd MMMM") : "Другое" }
+        let stringDates = dates.map { $0 != infinity
+            ? $0.toString(with: Constant.DateFormate.dayWithFullMonth.rawValue)
+            : "Другое"
+        }
 
         for date in stringDates {
             if !self.dates.contains(date) {
@@ -130,7 +139,9 @@ private extension CalendarViewModel {
         }
 
         itemsByDate = items.reduce(into: [String: [TodoItem]]()) { partialResult, item in
-            partialResult[item.deadline?.toString(with: "dd MMMM") ?? "Другое", default: []].append(item)
+            partialResult[item.deadline?.toString(
+                with: Constant.DateFormate.dayWithFullMonth.rawValue
+            ) ?? "Другое", default: []].append(item)
         }
     }
 

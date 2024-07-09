@@ -23,7 +23,14 @@ struct CustomCategoryView: View {
                 },
                 trailing: Button("Сохранить") {
                     if !categoryName.isEmpty {
-                        TodoItemCategory.addCustomCategory(name: categoryName, color: UIColor(cgColor: selectedColor.cgColor ?? CGColor(red: 255, green: 255, blue: 255, alpha: 1)))
+                        TodoItemCategory.addCustomCategory(
+                            name: categoryName,
+                            color: UIColor(
+                                cgColor:
+                                    selectedColor.cgColor ??
+                                CGColor(red: 255, green: 255, blue: 255, alpha: 1)
+                            )
+                        )
                         dismiss()
                     }
                 }

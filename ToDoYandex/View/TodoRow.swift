@@ -37,11 +37,11 @@ struct TodoRow: View {
                     .foregroundStyle(item.isDone ? .green : item.priority == .high ? .red : .gray)
             }
         }
-        .onTapGesture {
-            withAnimation {
-                item.isDone.toggle()
-            }
-        }
+//        .onTapGesture {
+//            withAnimation {
+//                item.isDone.toggle()
+//            }
+//        }
     }
 
     private var taskDetails: some View {
@@ -53,7 +53,7 @@ struct TodoRow: View {
                 .font(.system(size: 16))
 
 
-            if let deadline = item.deadline?.toString(with: "dd MMMM") {
+            if let deadline = item.deadline?.toString(with: Constant.DateFormate.dayWithFullMonth.rawValue) {
                 HStack {
                     Image(systemName: "calendar")
                     Text(deadline)

@@ -1,6 +1,10 @@
 import UIKit
 
 final class TodoItemTableViewCell: UITableViewCell {
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+    
     private lazy var itemTextLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
@@ -73,10 +77,6 @@ extension TodoItemTableViewCell {
             let attributedText = NSAttributedString(string: itemTextLabel.text ?? "", attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single])
             itemTextLabel.attributedText = attributedText
         }
-    }
-
-    static var reuseIdentifier: String {
-        return String(describing: self)
     }
 
     override func prepareForReuse() {

@@ -1,6 +1,10 @@
 import UIKit
 
 final class ItemDateCollectionViewCell: UICollectionViewCell {
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+    
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
@@ -51,10 +55,6 @@ extension ItemDateCollectionViewCell {
 
     func configure(with date: String) {
         dateLabel.text = date
-    }
-
-    static var reuseIdentifier: String {
-        return String(describing: self)
     }
 
     override func prepareForReuse() {

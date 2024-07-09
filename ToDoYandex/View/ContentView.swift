@@ -86,7 +86,8 @@ struct ContentView: View {
 
     private var todoList: some View {
         List {
-            ForEach($contentViewModel.items.sorted { $0.createdDate.wrappedValue < $1.createdDate.wrappedValue }) { $item in
+            ForEach($contentViewModel.items)
+            { $item in
                 if showAllItems || !item.isDone {
                     TodoRow(item: $item)
                         .contentShape(Rectangle())
@@ -95,8 +96,9 @@ struct ContentView: View {
                         }
                         .swipeActions(edge: .leading) {
                             Button(action: {
-                                item.isDone.toggle()
-                                contentViewModel.updateItemStatus(id: item.id)
+                                withAnimation {
+                                    contentViewModel.updateItemStatus(id: item.id)
+                                }
                             }) {
                                 Image(systemName: "checkmark.circle")
                             }
