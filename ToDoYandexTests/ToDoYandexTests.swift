@@ -6,7 +6,7 @@ final class ToDoYandexTests: XCTestCase {
 
     override func tearDownWithError() throws {}
 
-//   MARK: Тесты для проверки работы CSV
+// MARK: Тесты для проверки работы CSV
 
     func test_convert_to_csv_text_format() throws {
         let testText = "Всем привет, всем пока"
@@ -31,8 +31,8 @@ final class ToDoYandexTests: XCTestCase {
         guard let itemFromCsv = TodoItem.parseCsv(csv: itemToCsv) else { return }
         XCTAssertNotEqual(anotherItem, itemFromCsv, "Конвертер отработал неверно")
     }
-    
-//    MARK: Тесты для проверки работы JSON
+
+// MARK: Тесты для проверки работы JSON
 
     func test_json_contains_priority_normal_false() throws {
         let testText = "Всем привет, всем пока"
@@ -79,7 +79,7 @@ final class ToDoYandexTests: XCTestCase {
         XCTAssertNotEqual(anotherItem, itemFromCsv, "Конвертер отработал неверно")
     }
 
-//    MARK: Тесты для проверки работы equal
+// MARK: Тесты для проверки работы equal
 
     func test_compare_equal_items() throws {
         let testText = "Всем привет, всем пока"
@@ -104,7 +104,7 @@ final class ToDoYandexTests: XCTestCase {
         fileCache.addItem(task2)
 
         Task {
-            try await fileCache.save(to:"test.json")
+            try await fileCache.save(to: "test.json")
         }
     }
 }

@@ -6,10 +6,10 @@ extension Color {
             return "#000000"
         }
 
-        let r = Int(components[0] * 255)
-        let g = Int(components[1] * 255)
-        let b = Int(components[2] * 255)
-        let hex = String(format: "#%02X%02X%02X", r, g, b)
+        let red = Int(components[0] * 255)
+        let green = Int(components[1] * 255)
+        let blue = Int(components[2] * 255)
+        let hex = String(format: "#%02X%02X%02X", red, green, blue)
 
         return hex
     }

@@ -37,14 +37,12 @@ final class CalendarView: UIView {
     }
 }
 
-
 private extension CalendarView {
     func setupLayout() {
         backgroundColor = UIColor(named: "backgroundColor")
-        
+
         addSubview(dateCollection)
         addSubview(todoItemsTableView)
-
 
         NSLayoutConstraint.activate([
             dateCollection.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),

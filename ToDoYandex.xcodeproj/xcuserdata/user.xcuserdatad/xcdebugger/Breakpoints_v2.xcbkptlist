@@ -206,8 +206,8 @@
             filePath = "ToDoYandex/Service/FileCache.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "getDocumentsDirectory()"
             landmarkType = "7">
          </BreakpointContent>
@@ -270,8 +270,8 @@
             filePath = "ToDoYandex/Service/FileCache.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "getFilePath(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -286,8 +286,8 @@
             filePath = "ToDoYandex/Service/FileCache.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "getFilePath(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -302,8 +302,8 @@
             filePath = "ToDoYandex/Service/FileCache.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "getFilePath(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -350,10 +350,10 @@
             filePath = "ToDoYandex/Service/FileCache.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "FileCache"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1281,8 +1281,8 @@
             filePath = "ToDoYandex/Service/FileCache.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "updateItem(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1908,8 +1908,8 @@
             filePath = "ToDoYandex/ViewModel/CalendarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2082,8 +2082,8 @@
             filePath = "ToDoYandex/Service/FileCache.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "updateItemStatus(id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2098,8 +2098,8 @@
             filePath = "ToDoYandex/ViewModel/CalendarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "updateItemsByDateAndDates(items:)"
             landmarkType = "7">
             <Locations>
@@ -2161,8 +2161,8 @@
             filePath = "ToDoYandex/ViewModel/CalendarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "updateItemsByDateAndDates(items:)"
             landmarkType = "7">
             <Locations>
@@ -2257,8 +2257,8 @@
             filePath = "ToDoYandex/ViewModel/CalendarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "collectionView(_:didSelectItemAt:tableView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2289,10 +2289,10 @@
             filePath = "ToDoYandex/Service/FileCache.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "updateItem(_:)"
-            landmarkType = "7">
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "FileCache"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2417,8 +2417,8 @@
             filePath = "ToDoYandex/Service/FileCache.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "updateItemStatus(id:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -46,10 +46,8 @@ enum TodoItemCategory: Hashable, Identifiable {
     }
 
     static func getCategoryByName(_ name: String) -> TodoItemCategory? {
-        for category in allCases {
-            if category.id == name {
-                return category
-            }
+        for category in allCases where category.id == name {
+            return category
         }
         return nil
     }

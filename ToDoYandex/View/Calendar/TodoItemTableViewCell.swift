@@ -4,7 +4,7 @@ final class TodoItemTableViewCell: UITableViewCell {
     static var reuseIdentifier: String {
         return String(describing: self)
     }
-    
+
     private lazy var itemTextLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
@@ -36,7 +36,6 @@ final class TodoItemTableViewCell: UITableViewCell {
     }
 }
 
-
 extension TodoItemTableViewCell {
     private func setupLayout() {
         contentView.backgroundColor = UIColor(named: "detailColor")
@@ -46,8 +45,12 @@ extension TodoItemTableViewCell {
 
         NSLayoutConstraint.activate([
             itemTextLabel.centerYAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.centerYAnchor),
-            itemTextLabel.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            itemTextLabel.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: -24),
+            itemTextLabel.leadingAnchor.constraint(
+                equalTo: contentView.safeAreaLayoutGuide.leadingAnchor,
+                constant: 16),
+            itemTextLabel.trailingAnchor.constraint(
+                equalTo: contentView.safeAreaLayoutGuide.trailingAnchor,
+                constant: -24),
 
             categoryIndicator.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             categoryIndicator.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
@@ -63,7 +66,6 @@ extension TodoItemTableViewCell {
     }
 
     func updateTaskAppearance(isDone: Bool) {
-        itemTextLabel.textColor = isDone ? .gray : UIColor(named: "textColor")
         if isDone {
             itemTextLabel.textColor = .gray
             let attributedText = NSAttributedString(
@@ -71,10 +73,11 @@ extension TodoItemTableViewCell {
                 attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue]
             )
             itemTextLabel.attributedText = attributedText
-        }
-        else {
+        } else {
             itemTextLabel.textColor = UIColor(named: "textColor")
-            let attributedText = NSAttributedString(string: itemTextLabel.text ?? "", attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single])
+            let attributedText = NSAttributedString(
+                string: itemTextLabel.text ?? "",
+                attributes: [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single])
             itemTextLabel.attributedText = attributedText
         }
     }

@@ -37,29 +37,8 @@ extension TodoItem {
             return nil
         }
 
-        let deadlineDate: Date?
-        if deadlineDateString != "empty" {
-            if let parsedDate = ISO8601DateFormatter().date(from: deadlineDateString) {
-                deadlineDate = parsedDate
-            } else {
-                print("Полученные данные не соответствуют типу даты")
-                return nil
-            }
-        } else {
-            deadlineDate = nil
-        }
-
-        let modifiedDate: Date?
-        if modifiedDateString != "empty" {
-            if let parsedDate = ISO8601DateFormatter().date(from: modifiedDateString) {
-                modifiedDate = parsedDate
-            } else {
-                print("Полученные данные не соответствуют типу даты")
-                return nil
-            }
-        } else {
-            modifiedDate = nil
-        }
+        let deadlineDate: Date? = checkDate(deadlineDateString)
+        let modifiedDate: Date? = checkDate(modifiedDateString)
 
         return TodoItem(
             id: id,
@@ -93,5 +72,18 @@ extension TodoItem {
         }
         components.append(currentComponent)
         return components
+    }
+
+    private static func checkDate(_ dateString: String) -> Date? {
+        if dateString != "empty" {
+            if let parsedDate = ISO8601DateFormatter().date(from: dateString) {
+                return parsedDate
+            } else {
+                print("Полученные данные не соответствуют типу даты")
+                return nil
+            }
+        } else {
+            return nil
+        }
     }
 }

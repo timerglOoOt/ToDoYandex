@@ -53,7 +53,11 @@ final class FileCache: ObservableObject {
                 throw error
             }
         } else {
-            let error = NSError(domain: "FileCache", code: 404, userInfo: [NSLocalizedDescriptionKey: "File not found: \(filename)"])
+            let error = NSError(
+                domain: "FileCache",
+                code: 404,
+                userInfo: [NSLocalizedDescriptionKey: "File not found: \(filename)"]
+            )
             throw error
         }
     }

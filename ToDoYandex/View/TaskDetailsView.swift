@@ -69,7 +69,7 @@ struct TaskDetailsView: View {
         Button(action: {
             taskDetailsViewModel.deleteTodoItem(by: taskDetailsViewModel.id)
             dismiss()
-        }) {
+        }, label: {
             Text("Удалить")
                 .foregroundColor(.red)
                 .padding()
@@ -77,7 +77,7 @@ struct TaskDetailsView: View {
                 .background(Color("detailColor"))
                 .cornerRadius(10)
                 .padding(.horizontal)
-        }
+        })
     }
 
     private var horizontalView: some View {
@@ -166,10 +166,6 @@ struct TaskDetailsView: View {
 //                    HStack {
                         Text(category.name)
                             .foregroundStyle(Color(category.color))
-//                        FIXME: Все кружки одного цвета
-//                        Image(systemName: "circle.fill")
-//                            .symbolRenderingMode(.palette)
-//                            .foregroundColor(Color(category.color))
 //                    }
                             .tag(category)
                 }

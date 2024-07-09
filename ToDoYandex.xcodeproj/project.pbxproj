@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37DDC7BE598DBAC7567DF642 /* Pods_ToDoYandex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0009B076D33EA75759BD2A29 /* Pods_ToDoYandex.framework */; };
+		C7D996B9C820D967D6525A89 /* Pods_ToDoYandex_ToDoYandexUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACB2EF0E05D99D674DE2CD6 /* Pods_ToDoYandex_ToDoYandexUITests.framework */; };
 		CE27CA6C2C35C4FD00E8BA39 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27CA6B2C35C4FD00E8BA39 /* CalendarView.swift */; };
 		CE27CA6E2C35D5C500E8BA39 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27CA6D2C35D5C500E8BA39 /* CalendarViewController.swift */; };
 		CE27CA702C35D6A700E8BA39 /* CalendarSUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE27CA6F2C35D6A700E8BA39 /* CalendarSUIView.swift */; };
@@ -35,6 +37,7 @@
 		CEEB07FB2C2EE53400CEE8E1 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB07FA2C2EE53400CEE8E1 /* ContentViewModel.swift */; };
 		CEEB07FD2C2F9BB000CEE8E1 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB07FC2C2F9BAF00CEE8E1 /* Color+Hex.swift */; };
 		CEEDC6332C2B2577008F857C /* TodoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDC6322C2B2577008F857C /* TodoRow.swift */; };
+		EA16B5ADDB8B5705FE01B976 /* Pods_ToDoYandexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78EB25431F177C58F9FEE8EF /* Pods_ToDoYandexTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0009B076D33EA75759BD2A29 /* Pods_ToDoYandex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoYandex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		087E039972C21C2E38488EF3 /* Pods-ToDoYandex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoYandex.debug.xcconfig"; path = "Target Support Files/Pods-ToDoYandex/Pods-ToDoYandex.debug.xcconfig"; sourceTree = "<group>"; };
+		0AADB057D683B6F0308C1B1E /* Pods-ToDoYandex-ToDoYandexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoYandex-ToDoYandexUITests.debug.xcconfig"; path = "Target Support Files/Pods-ToDoYandex-ToDoYandexUITests/Pods-ToDoYandex-ToDoYandexUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1ACB2EF0E05D99D674DE2CD6 /* Pods_ToDoYandex_ToDoYandexUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoYandex_ToDoYandexUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C301D48DFD776F1089CA6D2 /* Pods-ToDoYandex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoYandex.release.xcconfig"; path = "Target Support Files/Pods-ToDoYandex/Pods-ToDoYandex.release.xcconfig"; sourceTree = "<group>"; };
+		2A98B21AB94EFB6A8FDDBD74 /* Pods-ToDoYandexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoYandexTests.debug.xcconfig"; path = "Target Support Files/Pods-ToDoYandexTests/Pods-ToDoYandexTests.debug.xcconfig"; sourceTree = "<group>"; };
+		78EB25431F177C58F9FEE8EF /* Pods_ToDoYandexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoYandexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0CC5F89D6CA933071CDE4F7 /* Pods-ToDoYandexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoYandexTests.release.xcconfig"; path = "Target Support Files/Pods-ToDoYandexTests/Pods-ToDoYandexTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE27CA6B2C35C4FD00E8BA39 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		CE27CA6D2C35D5C500E8BA39 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		CE27CA6F2C35D6A700E8BA39 /* CalendarSUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSUIView.swift; sourceTree = "<group>"; };
@@ -86,6 +97,7 @@
 		CEEB07FA2C2EE53400CEE8E1 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CEEB07FC2C2F9BAF00CEE8E1 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		CEEDC6322C2B2577008F857C /* TodoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRow.swift; sourceTree = "<group>"; };
+		D9FDE4DEB6B63C2B2D9BD339 /* Pods-ToDoYandex-ToDoYandexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoYandex-ToDoYandexUITests.release.xcconfig"; path = "Target Support Files/Pods-ToDoYandex-ToDoYandexUITests/Pods-ToDoYandex-ToDoYandexUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37DDC7BE598DBAC7567DF642 /* Pods_ToDoYandex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA16B5ADDB8B5705FE01B976 /* Pods_ToDoYandexTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,12 +121,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D996B9C820D967D6525A89 /* Pods_ToDoYandex_ToDoYandexUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02F58C589B55048DB5BDF210 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				087E039972C21C2E38488EF3 /* Pods-ToDoYandex.debug.xcconfig */,
+				1C301D48DFD776F1089CA6D2 /* Pods-ToDoYandex.release.xcconfig */,
+				0AADB057D683B6F0308C1B1E /* Pods-ToDoYandex-ToDoYandexUITests.debug.xcconfig */,
+				D9FDE4DEB6B63C2B2D9BD339 /* Pods-ToDoYandex-ToDoYandexUITests.release.xcconfig */,
+				2A98B21AB94EFB6A8FDDBD74 /* Pods-ToDoYandexTests.debug.xcconfig */,
+				A0CC5F89D6CA933071CDE4F7 /* Pods-ToDoYandexTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AFC0F0A3B22C843BC88E40BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0009B076D33EA75759BD2A29 /* Pods_ToDoYandex.framework */,
+				1ACB2EF0E05D99D674DE2CD6 /* Pods_ToDoYandex_ToDoYandexUITests.framework */,
+				78EB25431F177C58F9FEE8EF /* Pods_ToDoYandexTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE27CA6A2C35C48600E8BA39 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +196,8 @@
 				CECEE4A52C22134400F1B946 /* ToDoYandexTests */,
 				CECEE4AF2C22134400F1B946 /* ToDoYandexUITests */,
 				CECEE4932C22134200F1B946 /* Products */,
+				02F58C589B55048DB5BDF210 /* Pods */,
+				AFC0F0A3B22C843BC88E40BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,9 +293,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CECEE4B62C22134400F1B946 /* Build configuration list for PBXNativeTarget "ToDoYandex" */;
 			buildPhases = (
+				66EA9BEEB05B786004EBD590 /* [CP] Check Pods Manifest.lock */,
 				CECEE48E2C22134200F1B946 /* Sources */,
 				CECEE48F2C22134200F1B946 /* Frameworks */,
 				CECEE4902C22134200F1B946 /* Resources */,
+				CE2C3B412C3DD81B006BE3EF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -270,6 +312,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CECEE4B92C22134400F1B946 /* Build configuration list for PBXNativeTarget "ToDoYandexTests" */;
 			buildPhases = (
+				0398893F5E711A17BDA04707 /* [CP] Check Pods Manifest.lock */,
 				CECEE49E2C22134400F1B946 /* Sources */,
 				CECEE49F2C22134400F1B946 /* Frameworks */,
 				CECEE4A02C22134400F1B946 /* Resources */,
@@ -288,6 +331,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CECEE4BC2C22134400F1B946 /* Build configuration list for PBXNativeTarget "ToDoYandexUITests" */;
 			buildPhases = (
+				6033A0D1BF4922F92B009085 /* [CP] Check Pods Manifest.lock */,
 				CECEE4A82C22134400F1B946 /* Sources */,
 				CECEE4A92C22134400F1B946 /* Frameworks */,
 				CECEE4AA2C22134400F1B946 /* Resources */,
@@ -370,6 +414,93 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0398893F5E711A17BDA04707 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToDoYandexTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6033A0D1BF4922F92B009085 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToDoYandex-ToDoYandexUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66EA9BEEB05B786004EBD590 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToDoYandex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE2C3B412C3DD81B006BE3EF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CECEE48E2C22134200F1B946 /* Sources */ = {
@@ -551,6 +682,7 @@
 		};
 		CECEE4B72C22134400F1B946 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 087E039972C21C2E38488EF3 /* Pods-ToDoYandex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -580,6 +712,7 @@
 		};
 		CECEE4B82C22134400F1B946 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C301D48DFD776F1089CA6D2 /* Pods-ToDoYandex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -609,6 +742,7 @@
 		};
 		CECEE4BA2C22134400F1B946 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A98B21AB94EFB6A8FDDBD74 /* Pods-ToDoYandexTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -628,6 +762,7 @@
 		};
 		CECEE4BB2C22134400F1B946 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0CC5F89D6CA933071CDE4F7 /* Pods-ToDoYandexTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -647,6 +782,7 @@
 		};
 		CECEE4BD2C22134400F1B946 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AADB057D683B6F0308C1B1E /* Pods-ToDoYandex-ToDoYandexUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -664,6 +800,7 @@
 		};
 		CECEE4BE2C22134400F1B946 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9FDE4DEB6B63C2B2D9BD339 /* Pods-ToDoYandex-ToDoYandexUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

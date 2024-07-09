@@ -20,12 +20,12 @@ struct ContentView: View {
                         Spacer()
                         Button(action: {
                             showAllItems.toggle()
-                        }) {
+                        }, label: {
                             Text(showAllItems ? "Скрыть" : "Показать")
                                 .foregroundColor(.blue)
                                 .padding(.trailing)
                                 .fontWeight(.semibold)
-                        }
+                        })
                     }
                     .font(.system(size: 16))
                     .padding(.horizontal)
@@ -36,7 +36,7 @@ struct ContentView: View {
                     addButton
                 }
                 .navigationTitle("Мои дела")
-                .toolbar{
+                .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         NavigationLink(destination: calendar) {
                            Image(systemName: "calendar")
@@ -86,8 +86,7 @@ struct ContentView: View {
 
     private var todoList: some View {
         List {
-            ForEach($contentViewModel.items)
-            { $item in
+            ForEach($contentViewModel.items) { $item in
                 if showAllItems || !item.isDone {
                     TodoRow(item: $item)
                         .contentShape(Rectangle())
@@ -99,9 +98,9 @@ struct ContentView: View {
                                 withAnimation {
                                     contentViewModel.updateItemStatus(id: item.id)
                                 }
-                            }) {
+                            }, label: {
                                 Image(systemName: "checkmark.circle")
-                            }
+                            })
                             .tint(.green)
                         }
                         .swipeActions(edge: .trailing) {

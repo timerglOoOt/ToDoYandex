@@ -10,7 +10,7 @@ final class ContentViewModel: ObservableObject {
     var doneItemsCount: Int {
         items.filter { $0.isDone }.count
     }
-    
+
     init(fileCache: FileCache, filename: String) {
         self.fileCache = fileCache
         self.items = Array(fileCache.items.values)
