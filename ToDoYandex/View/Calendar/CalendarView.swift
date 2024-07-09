@@ -59,7 +59,7 @@ private extension CalendarView {
 
     func setDateCollectionLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 66, height: 60)
+        layout.itemSize = CGSize(width: 70, height: 60)
         layout.minimumLineSpacing = 8
         layout.scrollDirection = .horizontal
         return layout
