@@ -1,6 +1,6 @@
-import Foundation
 import SwiftUI
 import UIKit
+//import FileCachePackage
 
 enum Priority: String {
     case low = "Неважное"
@@ -50,5 +50,20 @@ struct TodoItem: Identifiable {
 extension TodoItem {
     var isHighPriority: Bool {
         priority == .high
+    }
+
+    func toggleIsDone() -> Self {
+        return TodoItem(
+            id: self.id,
+            text: self.text,
+            priority: self.priority,
+            deadline: self.deadline,
+            isDone: !self.isDone,
+            createdDate: self.createdDate,
+            modifiedDate: self.modifiedDate,
+            hexColor: self.hexColor,
+            category: self.category,
+            files: self.files
+        )
     }
 }

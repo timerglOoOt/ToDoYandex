@@ -77,6 +77,7 @@
 		CE294C2A2C2C623E00BA60F1 /* Date+toString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toString.swift"; sourceTree = "<group>"; };
 		CE3869EB2C3DA82B00B897D3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		CE4BC90F2C260AFA00C5A166 /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
+		CE7AA11E2C40613D0082E9EC /* FileCachePackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FileCachePackage; sourceTree = "<group>"; };
 		CE8FFEE72C2DE2D600CF0997 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		CEAD12102C382AA400B6E4FB /* ItemDateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDateCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEAD12122C389A4500B6E4FB /* TodoItemCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemCategory.swift; sourceTree = "<group>"; };
@@ -191,9 +192,18 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		CE8AB5B32C3FCA1400172509 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CE7AA11E2C40613D0082E9EC /* FileCachePackage */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		CECEE4892C22134200F1B946 = {
 			isa = PBXGroup;
 			children = (
+				CE8AB5B32C3FCA1400172509 /* Packages */,
 				CECEE4942C22134200F1B946 /* ToDoYandex */,
 				CECEE4A52C22134400F1B946 /* ToDoYandexTests */,
 				CECEE4AF2C22134400F1B946 /* ToDoYandexUITests */,

@@ -24,7 +24,9 @@ final class ContentViewModel: ObservableObject {
     }
 
     func updateItemStatus(id: String) {
-        fileCache.updateItemStatus(id: id)
+        guard let item = fileCache.getItem(by: id) else { return }
+        let newItem = item.toggleIsDone()
+        fileCache.updateItem(newItem)
     }
 
     func addTodoItem(_ item: TodoItem) {
