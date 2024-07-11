@@ -18,8 +18,9 @@
 		CE294C292C2C484D00BA60F1 /* TaskDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE294C282C2C484D00BA60F1 /* TaskDetailsView.swift */; };
 		CE294C2B2C2C623E00BA60F1 /* Date+toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE294C2A2C2C623E00BA60F1 /* Date+toString.swift */; };
 		CE2C3B442C3DE44A006BE3EF /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE2C3B432C3DE44A006BE3EF /* CocoaLumberjackSwift */; };
+		CE2D4CAE2C408009001F9E97 /* FileCache in Frameworks */ = {isa = PBXBuildFile; productRef = CE2D4CAD2C408009001F9E97 /* FileCache */; };
 		CE3869EC2C3DA82B00B897D3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3869EB2C3DA82B00B897D3 /* Constant.swift */; };
-		CE4BC9102C260AFA00C5A166 /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC90F2C260AFA00C5A166 /* FileCache.swift */; };
+		CE4BC9102C260AFA00C5A166 /* FileCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC90F2C260AFA00C5A166 /* FileCacheService.swift */; };
 		CE8FFEE82C2DE2D600CF0997 /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FFEE72C2DE2D600CF0997 /* CustomTextEditor.swift */; };
 		CEAD12112C382AA400B6E4FB /* ItemDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD12102C382AA400B6E4FB /* ItemDateCollectionViewCell.swift */; };
 		CEAD12132C389A4500B6E4FB /* TodoItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD12122C389A4500B6E4FB /* TodoItemCategory.swift */; };
@@ -75,9 +76,9 @@
 		CE294C262C2C428000BA60F1 /* TaskDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewModel.swift; sourceTree = "<group>"; };
 		CE294C282C2C484D00BA60F1 /* TaskDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsView.swift; sourceTree = "<group>"; };
 		CE294C2A2C2C623E00BA60F1 /* Date+toString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toString.swift"; sourceTree = "<group>"; };
+		CE2D4CAB2C407D1A001F9E97 /* FileCache */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FileCache; sourceTree = "<group>"; };
 		CE3869EB2C3DA82B00B897D3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		CE4BC90F2C260AFA00C5A166 /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
-		CE7AA11E2C40613D0082E9EC /* FileCachePackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FileCachePackage; sourceTree = "<group>"; };
+		CE4BC90F2C260AFA00C5A166 /* FileCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCacheService.swift; sourceTree = "<group>"; };
 		CE8FFEE72C2DE2D600CF0997 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		CEAD12102C382AA400B6E4FB /* ItemDateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDateCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEAD12122C389A4500B6E4FB /* TodoItemCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemCategory.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2C3B442C3DE44A006BE3EF /* CocoaLumberjackSwift in Frameworks */,
+				CE2D4CAE2C408009001F9E97 /* FileCache in Frameworks */,
 				37DDC7BE598DBAC7567DF642 /* Pods_ToDoYandex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +177,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		CE2D4CAA2C407D1A001F9E97 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CE2D4CAB2C407D1A001F9E97 /* FileCache */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		CE3869EA2C3DA7EF00B897D3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,23 +197,15 @@
 		CE4BC90E2C260AEA00C5A166 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				CE4BC90F2C260AFA00C5A166 /* FileCache.swift */,
+				CE4BC90F2C260AFA00C5A166 /* FileCacheService.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		CE8AB5B32C3FCA1400172509 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				CE7AA11E2C40613D0082E9EC /* FileCachePackage */,
-			);
-			name = Packages;
 			sourceTree = "<group>";
 		};
 		CECEE4892C22134200F1B946 = {
 			isa = PBXGroup;
 			children = (
-				CE8AB5B32C3FCA1400172509 /* Packages */,
+				CE2D4CAA2C407D1A001F9E97 /* Packages */,
 				CECEE4942C22134200F1B946 /* ToDoYandex */,
 				CECEE4A52C22134400F1B946 /* ToDoYandexTests */,
 				CECEE4AF2C22134400F1B946 /* ToDoYandexUITests */,
@@ -318,6 +320,7 @@
 			name = ToDoYandex;
 			packageProductDependencies = (
 				CE2C3B432C3DE44A006BE3EF /* CocoaLumberjackSwift */,
+				CE2D4CAD2C408009001F9E97 /* FileCache */,
 			);
 			productName = ToDoYandex;
 			productReference = CECEE4922C22134200F1B946 /* ToDoYandex.app */;
@@ -540,7 +543,7 @@
 				CE294C292C2C484D00BA60F1 /* TaskDetailsView.swift in Sources */,
 				CE27CA742C367D9100E8BA39 /* TodoItemTableViewCell.swift in Sources */,
 				CEEB07FD2C2F9BB000CEE8E1 /* Color+Hex.swift in Sources */,
-				CE4BC9102C260AFA00C5A166 /* FileCache.swift in Sources */,
+				CE4BC9102C260AFA00C5A166 /* FileCacheService.swift in Sources */,
 				CEAD12112C382AA400B6E4FB /* ItemDateCollectionViewCell.swift in Sources */,
 				CEAD12132C389A4500B6E4FB /* TodoItemCategory.swift in Sources */,
 				CECEE4982C22134200F1B946 /* ContentView.swift in Sources */,
@@ -844,7 +847,7 @@
 				CECEE4B52C22134400F1B946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CECEE4B62C22134400F1B946 /* Build configuration list for PBXNativeTarget "ToDoYandex" */ = {
 			isa = XCConfigurationList;
@@ -853,7 +856,7 @@
 				CECEE4B82C22134400F1B946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CECEE4B92C22134400F1B946 /* Build configuration list for PBXNativeTarget "ToDoYandexTests" */ = {
 			isa = XCConfigurationList;
@@ -862,7 +865,7 @@
 				CECEE4BB2C22134400F1B946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		CECEE4BC2C22134400F1B946 /* Build configuration list for PBXNativeTarget "ToDoYandexUITests" */ = {
 			isa = XCConfigurationList;
@@ -871,7 +874,7 @@
 				CECEE4BE2C22134400F1B946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
@@ -891,6 +894,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE2C3B422C3DE44A006BE3EF /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
+		};
+		CE2D4CAD2C408009001F9E97 /* FileCache */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FileCache;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

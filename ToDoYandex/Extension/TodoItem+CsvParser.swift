@@ -1,7 +1,7 @@
 import Foundation
-//import FileCachePackage
+import FileCache
 
-extension TodoItem {
+extension TodoItem: CsvParsable {
     var csv: String {
         let components = [
             id,

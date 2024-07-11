@@ -1,7 +1,7 @@
 import Foundation
-//import FileCachePackage
+import FileCache
 
-extension TodoItem {
+extension TodoItem: JsonParsable {
     var json: Any {
         var itemInfo: [String: Any] = [
             "id": id,

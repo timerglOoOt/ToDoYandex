@@ -1,12 +1,37 @@
-import Foundation
+import SwiftUI
 import CocoaLumberjackSwift
 
-final class FileCache: ObservableObject {
-    @Published private (set) var items: [String: TodoItem] = [:]
+public protocol JsonParsable {
+    var json: Any { get }
+    static func parseJson(json: Any) -> Self?
+}
+
+public protocol CsvParsable {
+    var csv: String { get }
+    static func parseCsv(csv: String) -> Self?
+}
+
+public protocol StringIdentifiable: Identifiable {
+    var id: String { get }
+}
+
+public typealias FileCachable = StringIdentifiable & JsonParsable & CsvParsable
+
+open class FileCache<T: FileCachable>: ObservableObject {
+    @Published public private (set) var items: [String: T] = [:]
     private var fileTable: [String: String] = [:]
 
+    public init() {
+        DDLog.add(DDOSLogger.sharedInstance)
+
+        let fileLogger: DDFileLogger = DDFileLogger()
+        fileLogger.rollingFrequency = 60 * 60 * 24
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 7
+        DDLog.add(fileLogger)
+    }
+
     @discardableResult
-    func addItem(_ task: TodoItem) -> Bool {
+    public func addItem(_ task: T) -> Bool {
         let id = task.id
         if !checkKeyContaining(id: id) {
             items[id] = task
@@ -18,7 +43,7 @@ final class FileCache: ObservableObject {
     }
 
     @discardableResult
-    func deleteItem(byId id: String) -> Bool {
+    public func deleteItem(byId id: String) -> Bool {
         if checkKeyContaining(id: id) {
             items.removeValue(forKey: id)
             DDLogInfo("Deleted item with id: \(id)")
@@ -28,7 +53,7 @@ final class FileCache: ObservableObject {
         return false
     }
 
-    func save(to filename: String) async throws {
+    public func save(to filename: String) async throws {
         let itemsArray = items.values.map { $0.json }
         do {
             let data = try JSONSerialization.data(withJSONObject: itemsArray, options: .prettyPrinted)
@@ -41,15 +66,16 @@ final class FileCache: ObservableObject {
         }
     }
 
-    func load(from filename: String) async throws {
+    @available(iOS 16.0, *)
+    public func load(from filename: String) async throws {
         let filePath = try getFilePath(for: filename)
         if FileManager.default.fileExists(atPath: filePath.path()) {
             do {
                 let data = try Data(contentsOf: filePath)
                 if let jsonArray = try JSONSerialization.jsonObject(with: data) as? [[String: Any]] {
-                    var loadedItems: [String: TodoItem] = [:]
+                    var loadedItems: [String: T] = [:]
                     for dict in jsonArray {
-                        if let item = TodoItem.parseJson(json: dict) {
+                        if let item = T.parseJson(json: dict) {
                             loadedItems[item.id] = item
                         }
                     }
@@ -72,7 +98,7 @@ final class FileCache: ObservableObject {
         }
     }
 
-    func getItem(by id: String) -> TodoItem? {
+    public func getItem(by id: String) -> T? {
         let item = items[id]
         if item != nil {
             DDLogInfo("Retrieved item with id: \(id)")
@@ -82,13 +108,13 @@ final class FileCache: ObservableObject {
         return item
     }
 
-    func isItemExist(by id: String) -> Bool {
+    public func isItemExist(by id: String) -> Bool {
         let exists = getItem(by: id) != nil
         DDLogInfo("Item existence check for id: \(id) - exists: \(exists)")
         return exists
     }
 
-    func updateItem(_ item: TodoItem) {
+    public func updateItem(_ item: T) {
         let id = item.id
         items[id] = item
         DDLogInfo("Updated item with id: \(id)")

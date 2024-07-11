@@ -1,9 +1,10 @@
 import Foundation
 import Combine
+import FileCache
 
 final class ContentViewModel: ObservableObject {
     @Published var items: [TodoItem]
-    let fileCache: FileCache
+    let fileCache: FileCache<TodoItem>
     private var cancellable = Set<AnyCancellable>()
     private let filename: String
 
@@ -11,14 +12,14 @@ final class ContentViewModel: ObservableObject {
         items.filter { $0.isDone }.count
     }
 
-    init(fileCache: FileCache, filename: String) {
+    init(fileCache: FileCache<TodoItem>, filename: String) {
         self.fileCache = fileCache
         self.items = Array(fileCache.items.values)
         self.filename = filename
         Task {
             try await fileCache.load(from: filename)
         }
-        fileCache.$items.sink { items in
+        self.fileCache.$items.sink { items in
             self.updateItems(items)
         }.store(in: &cancellable)
     }

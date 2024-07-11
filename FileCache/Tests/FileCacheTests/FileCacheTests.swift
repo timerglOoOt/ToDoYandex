@@ -1,11 +1,11 @@
 import XCTest
-@testable import FileCachePackage
+@testable import FileCache
 
-final class FileCachePackageTests: XCTestCase {
+final class FileCacheTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(FileCachePackage().text, "Hello, World!")
+        XCTAssertEqual(FileCache().text, "Hello, World!")
     }
 }

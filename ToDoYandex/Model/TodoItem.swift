@@ -1,6 +1,6 @@
 import SwiftUI
 import UIKit
-//import FileCachePackage
+import FileCache
 
 enum Priority: String {
     case low = "Неважное"
@@ -8,7 +8,7 @@ enum Priority: String {
     case high = "Важное"
 }
 
-struct TodoItem: Identifiable {
+struct TodoItem: StringIdentifiable {
     let id: String
     let text: String
     let priority: Priority

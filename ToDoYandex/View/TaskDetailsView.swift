@@ -1,5 +1,6 @@
 import SwiftUI
 import CocoaLumberjackSwift
+import FileCache
 
 struct TaskDetailsView: View {
     @ObservedObject private var taskDetailsViewModel: TaskDetailsViewModel
@@ -227,6 +228,6 @@ struct TaskDetailsView: View {
 
 struct TaskDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskDetailsView(taskDetailsViewModel: .init(fileCache: FileCache(), id: ""))
+        TaskDetailsView(taskDetailsViewModel: .init(fileCache: FileCache<TodoItem>(), id: ""))
     }
 }

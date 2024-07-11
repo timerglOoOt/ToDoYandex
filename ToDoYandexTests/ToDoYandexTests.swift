@@ -96,7 +96,7 @@ final class ToDoYandexTests: XCTestCase {
     }
 
     func test_save_to_file() throws {
-        let fileCache = FileCache()
+        let fileCache = FileCacheService()
 
         let task1 = TodoItem(id: "1", text: "Complete assignment", priority: .high)
         let task2 = TodoItem(id: "2", text: "Prepare presentation", priority: .normal)
