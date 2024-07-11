@@ -1,4 +1,5 @@
 import SwiftUI
+import CocoaLumberjackSwift
 
 struct TaskDetailsView: View {
     @ObservedObject private var taskDetailsViewModel: TaskDetailsViewModel
@@ -62,6 +63,9 @@ struct TaskDetailsView: View {
                 )
             }
             .background(Color("backgroundColor"))
+        }
+        .onAppear {
+            DDLogInfo("Opened task detail screen with id: \(taskDetailsViewModel.id)")
         }
     }
 

@@ -1,4 +1,5 @@
 import SwiftUI
+import CocoaLumberjackSwift
 
 struct ContentView: View {
     @ObservedObject var contentViewModel: ContentViewModel
@@ -68,6 +69,9 @@ struct ContentView: View {
                 contentViewModel.saveItems()
             }
             .background(Color("backgroundColor"))
+        }
+        .onAppear {
+            DDLogInfo("Opened main screen")
         }
         .scrollContentBackground(.hidden)
     }

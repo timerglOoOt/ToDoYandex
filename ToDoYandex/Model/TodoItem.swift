@@ -18,6 +18,7 @@ struct TodoItem: Identifiable {
     let modifiedDate: Date?
     let hexColor: String?
     let category: TodoItemCategory
+    let files: [String]?
 
     // MARK: Добавил конструктор, чтобы можно было избежать опциональные поля при инициализации
 
@@ -30,7 +31,8 @@ struct TodoItem: Identifiable {
         createdDate: Date = Date(),
         modifiedDate: Date? = nil,
         hexColor: String? = nil,
-        category: TodoItemCategory = .none
+        category: TodoItemCategory = .none,
+        files: [String]? = nil
     ) {
         self.id = id
         self.text = text
@@ -41,6 +43,7 @@ struct TodoItem: Identifiable {
         self.modifiedDate = modifiedDate
         self.hexColor = hexColor
         self.category = category
+        self.files = files
     }
 }
 

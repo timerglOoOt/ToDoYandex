@@ -1,16 +1,28 @@
 import Foundation
+import CocoaLumberjackSwift
 
 final class FileCache: ObservableObject {
     @Published private (set) var items: [String: TodoItem] = [:]
     private var fileTable: [String: String] = [:]
+
+    init() {
+        DDLog.add(DDOSLogger.sharedInstance)
+
+        let fileLogger: DDFileLogger = DDFileLogger()
+        fileLogger.rollingFrequency = 60 * 60 * 24
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 7
+        DDLog.add(fileLogger)
+    }
 
     @discardableResult
     func addItem(_ task: TodoItem) -> Bool {
         let id = task.id
         if !checkKeyContaining(id: id) {
             items[id] = task
+            DDLogInfo("Added item with id: \(id)")
             return true
         }
+        DDLogWarn("Attempted to add duplicate item with id: \(id)")
         return false
     }
 
@@ -18,8 +30,10 @@ final class FileCache: ObservableObject {
     func deleteItem(byId id: String) -> Bool {
         if checkKeyContaining(id: id) {
             items.removeValue(forKey: id)
+            DDLogInfo("Deleted item with id: \(id)")
             return true
         }
+        DDLogWarn("Attempted to delete non-existent item with id: \(id)")
         return false
     }
 
@@ -29,7 +43,9 @@ final class FileCache: ObservableObject {
             let data = try JSONSerialization.data(withJSONObject: itemsArray, options: .prettyPrinted)
             let filePath = try getFilePath(for: filename)
             try data.write(to: filePath, options: .atomic)
+            DDLogInfo("Saved items to file: \(filename)")
         } catch {
+            DDLogError("Failed to save items to file: \(filename), error: \(error.localizedDescription)")
             throw error
         }
     }
@@ -48,8 +64,10 @@ final class FileCache: ObservableObject {
                     }
 
                     items = loadedItems
+                    DDLogInfo("Loaded items from file: \(filename)")
                 }
             } catch {
+                DDLogError("Failed to load items from file: \(filename), error: \(error.localizedDescription)")
                 throw error
             }
         } else {
@@ -58,26 +76,39 @@ final class FileCache: ObservableObject {
                 code: 404,
                 userInfo: [NSLocalizedDescriptionKey: "File not found: \(filename)"]
             )
+            DDLogError("File not found: \(filename)")
             throw error
         }
     }
 
     func getItem(by id: String) -> TodoItem? {
-        return items[id]
+        let item = items[id]
+        if item != nil {
+            DDLogInfo("Retrieved item with id: \(id)")
+        } else {
+            DDLogWarn("Item with id: \(id) not found")
+        }
+        return item
     }
 
     func isItemExist(by id: String) -> Bool {
-        return getItem(by: id) != nil
+        let exists = getItem(by: id) != nil
+        DDLogInfo("Item existence check for id: \(id) - exists: \(exists)")
+        return exists
     }
 
     func updateItem(_ item: TodoItem) {
         let id = item.id
         items[id] = item
+        DDLogInfo("Updated item with id: \(id)")
     }
 
     func updateItemStatus(id: String) {
         if isItemExist(by: id) {
             items[id] = updateStatus(items[id])
+            DDLogInfo("Updated status for item with id: \(id)")
+        } else {
+            DDLogWarn("Attempted to update status for non-existent item with id: \(id)")
         }
     }
 }
