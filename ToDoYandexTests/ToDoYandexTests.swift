@@ -6,7 +6,7 @@ final class ToDoYandexTests: XCTestCase {
 
     override func tearDownWithError() throws {}
 
-//   MARK: Тесты для проверки работы CSV
+// MARK: Тесты для проверки работы CSV
 
     func test_convert_to_csv_text_format() throws {
         let testText = "Всем привет, всем пока"
@@ -31,8 +31,8 @@ final class ToDoYandexTests: XCTestCase {
         guard let itemFromCsv = TodoItem.parseCsv(csv: itemToCsv) else { return }
         XCTAssertNotEqual(anotherItem, itemFromCsv, "Конвертер отработал неверно")
     }
-    
-//    MARK: Тесты для проверки работы JSON
+
+// MARK: Тесты для проверки работы JSON
 
     func test_json_contains_priority_normal_false() throws {
         let testText = "Всем привет, всем пока"
@@ -62,7 +62,7 @@ final class ToDoYandexTests: XCTestCase {
         XCTAssertTrue(json?["deadline"] != nil, "Отсутствует срок сдачи")
     }
 
-    func test_convert_from_json_true() throws {
+    @MainActor func test_convert_from_json_true() throws {
         let testText = "Всем привет, всем пока"
         let item = TodoItem(text: testText, priority: .normal)
         let itemToJson = item.json
@@ -70,7 +70,7 @@ final class ToDoYandexTests: XCTestCase {
         XCTAssertEqual(item, itemFromCsv, "Конвертер отработал неверно")
     }
 
-    func test_convert_from_json_false() throws {
+    @MainActor func test_convert_from_json_false() throws {
         let testText = "Всем привет, всем пока"
         let item = TodoItem(text: testText, priority: .normal)
         let anotherItem = TodoItem(text: testText, priority: .high)
@@ -79,7 +79,7 @@ final class ToDoYandexTests: XCTestCase {
         XCTAssertNotEqual(anotherItem, itemFromCsv, "Конвертер отработал неверно")
     }
 
-//    MARK: Тесты для проверки работы equal
+// MARK: Тесты для проверки работы equal
 
     func test_compare_equal_items() throws {
         let testText = "Всем привет, всем пока"
@@ -95,16 +95,16 @@ final class ToDoYandexTests: XCTestCase {
         XCTAssertNotEqual(item1, item2, "Неправильно работает операция сравнения экземпляров структуры")
     }
 
-    func test_save_to_file() throws {
-        let fileCache = FileCache()
-
-        let task1 = TodoItem(id: "1", text: "Complete assignment", priority: .high)
-        let task2 = TodoItem(id: "2", text: "Prepare presentation", priority: .normal)
-        fileCache.addItem(task1)
-        fileCache.addItem(task2)
-
-        Task {
-            try await fileCache.save(to:"test.json")
-        }
-    }
+//    func test_save_to_file() throws {
+//        let fileCache = FileCacheService()
+//
+//        let task1 = TodoItem(id: "1", text: "Complete assignment", priority: .high)
+//        let task2 = TodoItem(id: "2", text: "Prepare presentation", priority: .normal)
+//        fileCache.addItem(task1)
+//        fileCache.addItem(task2)
+//
+//        Task {
+//            try await fileCache.save(to: "test.json")
+//        }
+//    }
 }

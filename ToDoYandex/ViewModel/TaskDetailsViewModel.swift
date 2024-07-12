@@ -1,8 +1,9 @@
 import Foundation
 import SwiftUI
+import FileCache
 
 final class TaskDetailsViewModel: ObservableObject {
-    private let fileCache: FileCache
+    private let fileCache: FileCache<TodoItem>
     @Published var taskText: String = ""
     @Published var priority: Priority = .normal
     @Published var deadlineEnabled: Bool = false
@@ -11,7 +12,7 @@ final class TaskDetailsViewModel: ObservableObject {
     @Published var category: TodoItemCategory = .none
     let id: String
 
-    init(fileCache: FileCache, id: String) {
+    init(fileCache: FileCache<TodoItem>, id: String) {
         self.fileCache = fileCache
         self.id = id == "" ? UUID().uuidString : id
         configureValues(with: id)

@@ -1,6 +1,6 @@
-import Foundation
 import SwiftUI
 import UIKit
+import FileCache
 
 enum Priority: String {
     case low = "Неважное"
@@ -8,7 +8,7 @@ enum Priority: String {
     case high = "Важное"
 }
 
-struct TodoItem: Identifiable {
+struct TodoItem: StringIdentifiable {
     let id: String
     let text: String
     let priority: Priority
@@ -18,6 +18,7 @@ struct TodoItem: Identifiable {
     let modifiedDate: Date?
     let hexColor: String?
     let category: TodoItemCategory
+    let files: [String]?
 
     // MARK: Добавил конструктор, чтобы можно было избежать опциональные поля при инициализации
 
@@ -30,7 +31,8 @@ struct TodoItem: Identifiable {
         createdDate: Date = Date(),
         modifiedDate: Date? = nil,
         hexColor: String? = nil,
-        category: TodoItemCategory = .none
+        category: TodoItemCategory = .none,
+        files: [String]? = nil
     ) {
         self.id = id
         self.text = text
@@ -41,11 +43,27 @@ struct TodoItem: Identifiable {
         self.modifiedDate = modifiedDate
         self.hexColor = hexColor
         self.category = category
+        self.files = files
     }
 }
 
 extension TodoItem {
     var isHighPriority: Bool {
         priority == .high
+    }
+
+    func toggleIsDone() -> Self {
+        return TodoItem(
+            id: self.id,
+            text: self.text,
+            priority: self.priority,
+            deadline: self.deadline,
+            isDone: !self.isDone,
+            createdDate: self.createdDate,
+            modifiedDate: self.modifiedDate,
+            hexColor: self.hexColor,
+            category: self.category,
+            files: self.files
+        )
     }
 }

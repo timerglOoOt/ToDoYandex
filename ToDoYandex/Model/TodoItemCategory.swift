@@ -37,20 +37,19 @@ enum TodoItemCategory: Hashable, Identifiable {
         }
     }
 
-    static var allCases: [TodoItemCategory] = [.work, .study, .hobby, .none]
+    @MainActor private static var _allCases: [TodoItemCategory] = [.work, .study, .hobby, .none]
 
-    static func addCustomCategory(name: String, color: UIColor) {
-        if !allCases.contains(.custom(name: name, color: color)) {
-            allCases.append(.custom(name: name, color: color))
+    @MainActor static var allCases: [TodoItemCategory] {
+        return _allCases
+    }
+
+    @MainActor static func addCustomCategory(name: String, color: UIColor) {
+        if !_allCases.contains(.custom(name: name, color: color)) {
+            _allCases.append(.custom(name: name, color: color))
         }
     }
 
-    static func getCategoryByName(_ name: String) -> TodoItemCategory? {
-        for category in allCases {
-            if category.id == name {
-                return category
-            }
-        }
-        return nil
+    @MainActor static func getCategoryByName(_ name: String) -> TodoItemCategory? {
+        return _allCases.first { $0.id == name }
     }
 }

@@ -52,7 +52,6 @@ struct TodoRow: View {
                 .foregroundColor(item.isDone ? .gray : Color("textColor"))
                 .font(.system(size: 16))
 
-
             if let deadline = item.deadline?.toString(with: Constant.DateFormate.dayWithFullMonth.rawValue) {
                 HStack {
                     Image(systemName: "calendar")

@@ -1,6 +1,7 @@
 import Foundation
+import FileCache
 
-extension TodoItem {
+extension TodoItem: JsonParsable {
     var json: Any {
         var itemInfo: [String: Any] = [
             "id": id,
@@ -22,7 +23,8 @@ extension TodoItem {
             itemInfo["deadline"] = ISO8601DateFormatter().string(from: modifiedDate)
         }
 
-        // MARK: решил использовать такую конструкцию для обработки ошибок создания json, в случае неудачи вернем пустую map
+        // MARK: решил использовать такую конструкцию для обработки ошибок создания json,
+        // в случае неудачи вернем пустую map
 
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: itemInfo)
@@ -36,9 +38,9 @@ extension TodoItem {
         return [:]
     }
 
-    
     // MARK: здесь вообще без обработки ошибок, потому что возвращаем опционал
 
+    @MainActor
     static func parseJson(json: Any) -> TodoItem? {
         guard let jsonObject = json as? [String: Any] else { return nil }
 
@@ -54,16 +56,25 @@ extension TodoItem {
 
         let category = TodoItemCategory.getCategoryByName(categoryString) ?? .none
 
-        var deadline: Date? = nil
+        var deadline: Date?
         if let deadlineString = jsonObject["deadline"] as? String {
             deadline = ISO8601DateFormatter().date(from: deadlineString)
         }
 
-        var modifiedDate: Date? = nil
+        var modifiedDate: Date?
         if let modifiedDateString = jsonObject["modifiedDate"] as? String {
             modifiedDate = ISO8601DateFormatter().date(from: modifiedDateString)
         }
 
-        return TodoItem(id: id, text: text, priority: priority, deadline: deadline, isDone: isDone, createdDate: createdDate, modifiedDate: modifiedDate, category: category)
+        return TodoItem(
+            id: id,
+            text: text,
+            priority: priority,
+            deadline: deadline,
+            isDone: isDone,
+            createdDate: createdDate,
+            modifiedDate: modifiedDate,
+            category: category
+        )
     }
 }

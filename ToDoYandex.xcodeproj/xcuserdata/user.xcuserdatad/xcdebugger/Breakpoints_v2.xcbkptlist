@@ -14,8 +14,8 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "parseJson(json:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "parseJson(json:)"
             landmarkType = "7">
             <Locations>
@@ -78,8 +78,8 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "parseJson(json:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,86 +135,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "399D47DD-203F-4B2C-A37B-638191AEF42C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "save(to:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "399D47DD-203F-4B2C-A37B-638191AEF42C - b7caef26160a2e96"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for ToDoYandex.FileCache.save(to: Swift.String) async throws -&gt; ()"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "940">
-               </Location>
-               <Location
-                  uuid = "399D47DD-203F-4B2C-A37B-638191AEF42C - b7caef26160a2e96"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for ToDoYandex.FileCache.save(to: Swift.String) async throws -&gt; ()"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "956">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "240847F8-269F-4C03-BF69-E08DB7378AB8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "save(to:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "792B4D9C-9EBB-4521-B4C2-EF6750053A5E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "getDocumentsDirectory()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B0BD32A8-D47E-49C8-9121-D19211EA4A39"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -238,153 +158,9 @@
             filePath = "ToDoYandex/ViewModel/TaskDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "addTodoItem(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "287CE7BC-FD42-4AEB-873C-C87C863E2E11"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "19BD1923-541B-445A-8553-1FFB253E38A8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "getFilePath(for:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9AA92A3F-52AF-4A12-8FCD-855EDD7A5F88"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "getFilePath(for:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5B8129B9-8379-4D4F-B288-A942C8ED4BB2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "getFilePath(for:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FACC1AFB-2EDF-4939-9AF8-8F55C392C7EB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "54895B1F-23D6-4BC5-98DE-1F2D2BA138DB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AE23A5F0-9168-4B04-AABE-CBC3C1D63F1B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "14A31721-E516-42A1-8129-75BF3BA8BC8A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "65A520B5-A395-4702-A05D-CE70E4980D9E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "load(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -398,8 +174,8 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "parseJson(json:)"
             landmarkType = "7">
             <Locations>
@@ -439,118 +215,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A6F32CE2-71AE-4DC9-B6C3-BF8601F0CAA9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "188EEFFA-4002-4373-A7A5-67C2F257540C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "188EEFFA-4002-4373-A7A5-67C2F257540C - a3b392de3ff39b90"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ToDoYandex.FileCache.load(from: Swift.String) throws -&gt; ()"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "760">
-               </Location>
-               <Location
-                  uuid = "188EEFFA-4002-4373-A7A5-67C2F257540C - a3b392de3ff39b90"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ToDoYandex.FileCache.load(from: Swift.String) throws -&gt; ()"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "1116">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A3366F10-00E3-4563-89FD-60E95ED5A96C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "15C67929-956A-41A4-96DC-2DDABBCFE143"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "parseJson(json:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B9B84CFE-14A6-46D0-B0FF-FA75A72CC217"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F02FFCF4-329F-4324-9F83-CF71E025F8E2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -558,8 +222,8 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "parseJson(json:)"
             landmarkType = "7">
             <Locations>
@@ -606,8 +270,8 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "parseJson(json:)"
             landmarkType = "7">
             <Locations>
@@ -654,8 +318,8 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "parseJson(json:)"
             landmarkType = "7">
             <Locations>
@@ -702,25 +366,9 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "parseJson(json:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6E1EFACE-4923-4069-A035-5540D005909B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "addItem(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -814,8 +462,8 @@
             filePath = "ToDoYandex/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "init(fileCache:filename:)"
             landmarkType = "7">
             <Locations>
@@ -862,10 +510,10 @@
             filePath = "ToDoYandex/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "addTodoItem(_:)"
-            landmarkType = "7">
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "ContentViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -878,26 +526,10 @@
             filePath = "ToDoYandex/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "init(fileCache:filename:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A4B168D-1DD7-45FC-8AE9-CFE814DD0F11"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "load(from:)"
-            landmarkType = "7">
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "ContentViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -910,10 +542,10 @@
             filePath = "ToDoYandex/ViewModel/TaskDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "init(fileCache:id:)"
-            landmarkType = "7">
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "TaskDetailsViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -926,8 +558,8 @@
             filePath = "ToDoYandex/ViewModel/TaskDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "configureValues(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -942,8 +574,8 @@
             filePath = "ToDoYandex/ViewModel/TaskDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "configureValues(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -958,8 +590,8 @@
             filePath = "ToDoYandex/ViewModel/TaskDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "configureValues(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -974,8 +606,8 @@
             filePath = "ToDoYandex/ViewModel/TaskDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "configureValues(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -990,8 +622,8 @@
             filePath = "ToDoYandex/ViewModel/TaskDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6"
-            endingLineNumber = "6"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
             landmarkName = "TaskDetailsViewModel"
             landmarkType = "3">
             <Locations>
@@ -1274,22 +906,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EF9A9ECD-DEB0-4AFE-84CA-CB2A1883DEEE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "updateItem(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8E3AE789-9E6E-48B3-80B6-2534888F9F2F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1377,10 +993,10 @@
             filePath = "ToDoYandex/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "5"
-            endingLineNumber = "5"
-            landmarkName = "ContentViewModel"
-            landmarkType = "3">
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "cancellable"
+            landmarkType = "24">
             <Locations>
                <Location
                   uuid = "61341CEF-2035-41C6-A8C5-E8B76CD09381 - a387b968c5820a3a"
@@ -1530,9 +1146,9 @@
             filePath = "ToDoYandex/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "init(fileCache:filename:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "updateItemStatus(id:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1626,9 +1242,9 @@
             filePath = "ToDoYandex/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "updateItemStatus(id:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "addTodoItem(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1706,148 +1322,10 @@
             filePath = "ToDoYandex/ViewModel/CalendarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0DAE5DD7-A350-4B10-9B8D-6323FCBF7482"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4"
-            endingLineNumber = "4"
-            landmarkName = "FileCache"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "0DAE5DD7-A350-4B10-9B8D-6323FCBF7482 - ecca67c6695e4b3b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of ToDoYandex.FileCache.items : Swift.Dictionary&lt;Swift.String, ToDoYandex.TodoItem&gt;"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "4"
-                  endingLineNumber = "4"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "0DAE5DD7-A350-4B10-9B8D-6323FCBF7482 - 58ddd74b5b5a61e2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ToDoYandex.FileCache.items.getter : Swift.Dictionary&lt;Swift.String, ToDoYandex.TodoItem&gt;"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "4"
-                  endingLineNumber = "4"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "0DAE5DD7-A350-4B10-9B8D-6323FCBF7482 - e24561bd0911a596"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ToDoYandex.FileCache.items.setter : Swift.Dictionary&lt;Swift.String, ToDoYandex.TodoItem&gt;"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "4"
-                  endingLineNumber = "4"
-                  offsetFromSymbolStart = "140">
-               </Location>
-               <Location
-                  uuid = "0DAE5DD7-A350-4B10-9B8D-6323FCBF7482 - f45e86fda06f00e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ToDoYandex.FileCache.items.modify : Swift.Dictionary&lt;Swift.String, ToDoYandex.TodoItem&gt;"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "4"
-                  endingLineNumber = "4"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "0DAE5DD7-A350-4B10-9B8D-6323FCBF7482 - d066bb4d2a1aa313"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ToDoYandex.FileCache.items.modify : Swift.Dictionary&lt;Swift.String, ToDoYandex.TodoItem&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "4"
-                  endingLineNumber = "4"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "0DAE5DD7-A350-4B10-9B8D-6323FCBF7482 - d69831a3c30f10de"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ToDoYandex.FileCache.$items.getter : Combine.Published&lt;Swift.Dictionary&lt;Swift.String, ToDoYandex.TodoItem&gt;&gt;.Publisher"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "4"
-                  endingLineNumber = "4"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "0DAE5DD7-A350-4B10-9B8D-6323FCBF7482 - fa921b0975d7f4c2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ToDoYandex.FileCache.$items.setter : Combine.Published&lt;Swift.Dictionary&lt;Swift.String, ToDoYandex.TodoItem&gt;&gt;.Publisher"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "4"
-                  endingLineNumber = "4"
-                  offsetFromSymbolStart = "196">
-               </Location>
-               <Location
-                  uuid = "0DAE5DD7-A350-4B10-9B8D-6323FCBF7482 - 8213f4ac86330d07"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ToDoYandex.FileCache.init() -&gt; ToDoYandex.FileCache"
-                  moduleName = "ToDoYandex"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/%D0%BF%D0%B0%D0%BF%D0%BE%D1%87%D0%BA%D0%B0/ios/ToDoYandex/ToDoYandex/Service/FileCache.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "4"
-                  endingLineNumber = "4"
-                  offsetFromSymbolStart = "100">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1860,10 +1338,10 @@
             filePath = "ToDoYandex/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "updateItems(_:)"
-            landmarkType = "7">
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1876,8 +1354,8 @@
             filePath = "ToDoYandex/ViewModel/CalendarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "setupBinding(tableView:collectionView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1908,8 +1386,8 @@
             filePath = "ToDoYandex/ViewModel/CalendarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1924,10 +1402,8 @@
             filePath = "ToDoYandex/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "updateItems(_:)"
-            landmarkType = "7">
+            startingLineNumber = "54"
+            endingLineNumber = "54">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1940,10 +1416,10 @@
             filePath = "ToDoYandex/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "saveItems()"
-            landmarkType = "7">
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   uuid = "39FC1F57-0C85-469E-A961-FE17BFCEE55C - 6c1132fdfdb738ed"
@@ -2018,10 +1494,8 @@
             filePath = "ToDoYandex/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "updateItems(_:)"
-            landmarkType = "7">
+            startingLineNumber = "54"
+            endingLineNumber = "54">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2034,8 +1508,8 @@
             filePath = "ToDoYandex/ViewModel/TaskDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "addTodoItem(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2050,8 +1524,8 @@
             filePath = "ToDoYandex/ViewModel/TaskDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "addTodoItem(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2075,22 +1549,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3FC9589A-B9E1-4C98-922D-4B7B5D36AB69"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "updateItemStatus(id:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F599C6CF-AB5D-4EE9-B72C-77B91CD87D9E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2098,8 +1556,8 @@
             filePath = "ToDoYandex/ViewModel/CalendarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "updateItemsByDateAndDates(items:)"
             landmarkType = "7">
             <Locations>
@@ -2161,8 +1619,8 @@
             filePath = "ToDoYandex/ViewModel/CalendarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "updateItemsByDateAndDates(items:)"
             landmarkType = "7">
             <Locations>
@@ -2257,8 +1715,8 @@
             filePath = "ToDoYandex/ViewModel/CalendarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "collectionView(_:didSelectItemAt:tableView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2282,22 +1740,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "103DC7BC-B92F-423E-9EDB-F18313FFD3C9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "updateItem(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C56A86E4-9870-4BEA-A04B-39A0283962DF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2305,8 +1747,8 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
             landmarkName = "json"
             landmarkType = "24">
          </BreakpointContent>
@@ -2321,8 +1763,8 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "parseJson(json:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2353,8 +1795,8 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "parseJson(json:)"
             landmarkType = "7">
             <Locations>
@@ -2401,25 +1843,9 @@
             filePath = "ToDoYandex/Extension/TodoItem+JsonParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "parseJson(json:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E5279AEC-ED11-4813-A1F8-90D9CBE7777F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToDoYandex/Service/FileCache.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "updateItemStatus(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

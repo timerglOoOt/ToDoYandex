@@ -1,4 +1,6 @@
 import SwiftUI
+import CocoaLumberjackSwift
+import FileCache
 
 struct TaskDetailsView: View {
     @ObservedObject private var taskDetailsViewModel: TaskDetailsViewModel
@@ -63,13 +65,16 @@ struct TaskDetailsView: View {
             }
             .background(Color("backgroundColor"))
         }
+        .onAppear {
+            DDLogInfo("Opened task detail screen with id: \(taskDetailsViewModel.id)")
+        }
     }
 
     private var deleteButton: some View {
         Button(action: {
             taskDetailsViewModel.deleteTodoItem(by: taskDetailsViewModel.id)
             dismiss()
-        }) {
+        }, label: {
             Text("Удалить")
                 .foregroundColor(.red)
                 .padding()
@@ -77,7 +82,7 @@ struct TaskDetailsView: View {
                 .background(Color("detailColor"))
                 .cornerRadius(10)
                 .padding(.horizontal)
-        }
+        })
     }
 
     private var horizontalView: some View {
@@ -163,14 +168,8 @@ struct TaskDetailsView: View {
             Spacer()
             Picker("Категория", selection: $taskDetailsViewModel.category) {
                 ForEach(TodoItemCategory.allCases) { category in
-//                    HStack {
                         Text(category.name)
                             .foregroundStyle(Color(category.color))
-//                        FIXME: Все кружки одного цвета
-//                        Image(systemName: "circle.fill")
-//                            .symbolRenderingMode(.palette)
-//                            .foregroundColor(Color(category.color))
-//                    }
                             .tag(category)
                 }
             }
@@ -222,11 +221,5 @@ struct TaskDetailsView: View {
             }
             .padding(.horizontal)
         }
-    }
-}
-
-struct TaskDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        TaskDetailsView(taskDetailsViewModel: .init(fileCache: FileCache(), id: ""))
     }
 }

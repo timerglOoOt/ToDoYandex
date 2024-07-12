@@ -2,13 +2,14 @@ import Foundation
 import UIKit
 import Combine
 
+@MainActor
 final class CalendarViewModel {
     private let infinity = Date.distantFuture
     private let contentViewModel: ContentViewModel
     private var cancellable = Set<AnyCancellable>()
     private var dates = [String]()
     private var itemsByDate = [String: [TodoItem]]()
-    
+
     init(contentViewModel: ContentViewModel) {
         self.contentViewModel = contentViewModel
     }
@@ -40,7 +41,6 @@ extension CalendarViewModel {
         return date
     }
 
-
     func configureCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: TodoItemTableViewCell.reuseIdentifier,
@@ -56,7 +56,10 @@ extension CalendarViewModel {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(
+        _ tableView: UITableView,
+        leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
         let doneItemAction = UIContextualAction(style: .normal, title: nil) { [weak self] _, _, completion in
 
             if let date = self?.dates[indexPath.section],
@@ -74,7 +77,10 @@ extension CalendarViewModel {
         return config
     }
 
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(
+        _ tableView: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
         let cancelDoneItemAction = UIContextualAction(style: .normal, title: nil) { [weak self] _, _, completion in
 
             if let date = self?.dates[indexPath.section],
@@ -100,18 +106,24 @@ extension CalendarViewModel {
         dates.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: ItemDateCollectionViewCell.reuseIdentifier,
             for: indexPath
         ) as? ItemDateCollectionViewCell
         guard let cell else { return UICollectionViewCell() }
         cell.configure(with: dates[indexPath.row])
-        
+
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath, tableView: UITableView) {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath, tableView: UITableView
+    ) {
         scrollToSection(for: dates[indexPath.row], tableView: tableView)
     }
 
@@ -132,10 +144,8 @@ private extension CalendarViewModel {
             : "Другое"
         }
 
-        for date in stringDates {
-            if !self.dates.contains(date) {
-                self.dates.append(date)
-            }
+        for date in stringDates where !self.dates.contains(date) {
+            self.dates.append(date)
         }
 
         itemsByDate = items.reduce(into: [String: [TodoItem]]()) { partialResult, item in

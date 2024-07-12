@@ -5,8 +5,8 @@ struct CalendarSUIView: UIViewControllerRepresentable {
 
     func makeUIViewController(context: Context) -> CalendarViewController {
         let viewModel = CalendarViewModel(contentViewModel: viewModel)
-        let vc = CalendarViewController(viewModel: viewModel)
-        return vc
+        let viewController = CalendarViewController(viewModel: viewModel)
+        return viewController
     }
 
     func updateUIViewController(_ uiViewController: CalendarViewController, context: Context) {}

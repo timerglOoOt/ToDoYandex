@@ -57,15 +57,21 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: Отметка о выполненном/невыполненном задании по соответствуещему свайпу
 
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(
+        _ tableView: UITableView,
+        leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
         viewModel.tableView(tableView, leadingSwipeActionsConfigurationForRowAt: indexPath)
     }
 
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(
+        _ tableView: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
         viewModel.tableView(tableView, trailingSwipeActionsConfigurationForRowAt: indexPath)
     }
 
-//    MARK: Переход к нужной секции таблицы
+// MARK: Переход к нужной секции таблицы
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.selectDate(for: indexPath.section, collectionView: calendarView.dateCollection)
@@ -74,33 +80,26 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: Работа со скроллом таблицы
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView == calendarView.todoItemsTableView {
-            if let indexPaths = calendarView.todoItemsTableView.indexPathsForVisibleRows {
-                let sortedIndexPaths = indexPaths.sorted()
-                if let firstVisibleIndexPath = sortedIndexPaths.first {
-                    viewModel.selectDate(for: firstVisibleIndexPath.section, collectionView: calendarView.dateCollection)
-                }
-            }
-        }
+        findCollectionCell(scrollView: scrollView)
     }
 
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if scrollView == calendarView.todoItemsTableView {
-            if let indexPaths = calendarView.todoItemsTableView.indexPathsForVisibleRows {
-                let sortedIndexPaths = indexPaths.sorted()
-                if let firstVisibleIndexPath = sortedIndexPaths.first {
-                    viewModel.selectDate(for: firstVisibleIndexPath.section, collectionView: calendarView.dateCollection)
-                }
-            }
-        }
+        findCollectionCell(scrollView: scrollView)
     }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        findCollectionCell(scrollView: scrollView)
+    }
+
+    private func findCollectionCell(scrollView: UIScrollView) {
         if scrollView == calendarView.todoItemsTableView {
             if let indexPaths = calendarView.todoItemsTableView.indexPathsForVisibleRows {
                 let sortedIndexPaths = indexPaths.sorted()
                 if let firstVisibleIndexPath = sortedIndexPaths.first {
-                    viewModel.selectDate(for: firstVisibleIndexPath.section, collectionView: calendarView.dateCollection)
+                    viewModel.selectDate(
+                        for: firstVisibleIndexPath.section,
+                        collectionView: calendarView.dateCollection
+                    )
                 }
             }
         }
@@ -114,7 +113,10 @@ extension CalendarViewController: UICollectionViewDataSource, UICollectionViewDe
         viewModel.collectionView(collectionView, numberOfItemsInSection: section)
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
         viewModel.collectionView(collectionView, cellForItemAt: indexPath)
     }
 

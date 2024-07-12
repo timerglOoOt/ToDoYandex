@@ -1,4 +1,5 @@
 import SwiftUI
+import CocoaLumberjackSwift
 
 struct CustomCategoryView: View {
     @State private var categoryName = ""
@@ -31,10 +32,14 @@ struct CustomCategoryView: View {
                                 CGColor(red: 255, green: 255, blue: 255, alpha: 1)
                             )
                         )
+                        DDLogInfo("Added new category with name: \(categoryName)")
                         dismiss()
                     }
                 }
             )
+        }
+        .onAppear {
+            DDLogInfo("Opened custom category screen")
         }
     }
 }
