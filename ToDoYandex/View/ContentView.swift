@@ -136,7 +136,9 @@ struct ContentView: View {
     }
 
     private var addButton: some View {
-        Button(action: addItem) {
+        Button {
+            addItem()
+        } label: {
             Image(systemName: "plus")
                 .foregroundColor(.white)
                 .font(.title)
@@ -148,6 +150,7 @@ struct ContentView: View {
         .padding()
     }
 
+    @MainActor
     private func addItem() {
         itemId = ""
         isOpened.toggle()
@@ -156,11 +159,5 @@ struct ContentView: View {
     private func openItem(by id: String) {
         itemId = id
         isOpened.toggle()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(contentViewModel: .init(fileCache: .init(), filename: "test.json"))
     }
 }

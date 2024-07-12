@@ -2,6 +2,7 @@ import Foundation
 import Combine
 import FileCache
 
+@MainActor
 final class ContentViewModel: ObservableObject {
     @Published var items: [TodoItem]
     let fileCache: FileCache<TodoItem>

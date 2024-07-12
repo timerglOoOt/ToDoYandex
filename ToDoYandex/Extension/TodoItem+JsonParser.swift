@@ -40,6 +40,7 @@ extension TodoItem: JsonParsable {
 
     // MARK: здесь вообще без обработки ошибок, потому что возвращаем опционал
 
+    @MainActor
     static func parseJson(json: Any) -> TodoItem? {
         guard let jsonObject = json as? [String: Any] else { return nil }
 

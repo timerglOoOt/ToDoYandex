@@ -168,10 +168,8 @@ struct TaskDetailsView: View {
             Spacer()
             Picker("Категория", selection: $taskDetailsViewModel.category) {
                 ForEach(TodoItemCategory.allCases) { category in
-//                    HStack {
                         Text(category.name)
                             .foregroundStyle(Color(category.color))
-//                    }
                             .tag(category)
                 }
             }
@@ -223,11 +221,5 @@ struct TaskDetailsView: View {
             }
             .padding(.horizontal)
         }
-    }
-}
-
-struct TaskDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        TaskDetailsView(taskDetailsViewModel: .init(fileCache: FileCache<TodoItem>(), id: ""))
     }
 }

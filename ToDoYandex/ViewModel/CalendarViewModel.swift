@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 import Combine
 
+@MainActor
 final class CalendarViewModel {
     private let infinity = Date.distantFuture
     private let contentViewModel: ContentViewModel
