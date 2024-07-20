@@ -19,6 +19,7 @@ struct TodoItem: StringIdentifiable {
     let hexColor: String?
     let category: TodoItemCategory
     let files: [String]?
+    let lastUpdatedBy: String
 
     // MARK: Добавил конструктор, чтобы можно было избежать опциональные поля при инициализации
 
@@ -32,7 +33,8 @@ struct TodoItem: StringIdentifiable {
         modifiedDate: Date? = nil,
         hexColor: String? = nil,
         category: TodoItemCategory = .none,
-        files: [String]? = nil
+        files: [String]? = nil,
+        lastUpdatedBy: String = "default"
     ) {
         self.id = id
         self.text = text
@@ -44,6 +46,7 @@ struct TodoItem: StringIdentifiable {
         self.hexColor = hexColor
         self.category = category
         self.files = files
+        self.lastUpdatedBy = lastUpdatedBy
     }
 }
 
@@ -63,7 +66,8 @@ extension TodoItem {
             modifiedDate: self.modifiedDate,
             hexColor: self.hexColor,
             category: self.category,
-            files: self.files
+            files: self.files,
+            lastUpdatedBy: self.lastUpdatedBy
         )
     }
 }
