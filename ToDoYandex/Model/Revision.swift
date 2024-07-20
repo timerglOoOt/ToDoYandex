@@ -17,6 +17,6 @@ class Revision {
     }
 
     func incrementRevision() {
-        self.revision = self.revision + 1
+        self.revision += 1
     }
 }
