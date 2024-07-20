@@ -1,4 +1,4 @@
-import CocoaLumberjack
+import CocoaLumberjackSwift
 
 final class DefaultNetworkingService: NetworkingService {
     private let session: URLSession

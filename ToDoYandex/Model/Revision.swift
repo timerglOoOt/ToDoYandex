@@ -3,7 +3,7 @@ import Foundation
 @MainActor
 class Revision {
 
-    static let shared = RevisionValue()
+    static let shared = Revision()
     private init () {}
 
     private var revision: Int = 0
