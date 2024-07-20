@@ -2,13 +2,13 @@ import SwiftUI
 import UIKit
 import FileCache
 
-enum Priority: String {
+enum Priority: String, Codable {
     case low = "Неважное"
     case normal = "Обычное"
     case high = "Важное"
 }
 
-struct TodoItem: StringIdentifiable {
+struct TodoItem: StringIdentifiable, Codable {
     let id: String
     let text: String
     let priority: Priority
@@ -17,8 +17,9 @@ struct TodoItem: StringIdentifiable {
     let createdDate: Date
     let modifiedDate: Date?
     let hexColor: String?
-    let category: TodoItemCategory
+//    let category: TodoItemCategory
     let files: [String]?
+    let lastUpdatedBy: String
 
     // MARK: Добавил конструктор, чтобы можно было избежать опциональные поля при инициализации
 
@@ -32,7 +33,8 @@ struct TodoItem: StringIdentifiable {
         modifiedDate: Date? = nil,
         hexColor: String? = nil,
         category: TodoItemCategory = .none,
-        files: [String]? = nil
+        files: [String]? = nil,
+        lastUpdatedBy: String = "default"
     ) {
         self.id = id
         self.text = text
@@ -42,8 +44,9 @@ struct TodoItem: StringIdentifiable {
         self.createdDate = createdDate
         self.modifiedDate = modifiedDate
         self.hexColor = hexColor
-        self.category = category
+//        self.category = category
         self.files = files
+        self.lastUpdatedBy = lastUpdatedBy
     }
 }
 
@@ -62,8 +65,9 @@ extension TodoItem {
             createdDate: self.createdDate,
             modifiedDate: self.modifiedDate,
             hexColor: self.hexColor,
-            category: self.category,
-            files: self.files
+//            category: self.category,
+            files: self.files,
+            lastUpdatedBy: self.lastUpdatedBy
         )
     }
 }

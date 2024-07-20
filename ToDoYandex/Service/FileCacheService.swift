@@ -1,17 +1,25 @@
 // import Foundation
 // import CocoaLumberjackSwift
-// import FileCache
 //
 // final class FileCacheService {
-//    let fileCache = FileCache()
-//    @Published private (set) var items: [String: TodoItem] = [:]
-//    private var fileTable: [String: String] = [:]
+//     @Published private (set) var items: [String: TodoItem] = [:]
+//     private var fileTable: [String: String] = [:]
+//     let networkingService: NetworkingService
+//
+//     init(networkingService: NetworkingService) {
+//         self.networkingService = networkingService
+//     }
 //
 //    @discardableResult
 //    func addItem(_ task: TodoItem) -> Bool {
 //        let id = task.id
 //        if !checkKeyContaining(id: id) {
 //            items[id] = task
+////            Task {
+////                Revision.shared.incrementRevision()
+////                try await networkingService.addItem(task, revision: Revision.shared.getRevision())
+////            }
+//
 //            DDLogInfo("Added item with id: \(id)")
 //            return true
 //        }
@@ -43,36 +51,36 @@
 //        }
 //    }
 //
-//    func load(from filename: String) async throws {
-//        let filePath = try getFilePath(for: filename)
-//        if FileManager.default.fileExists(atPath: filePath.path()) {
-//            do {
-//                let data = try Data(contentsOf: filePath)
-//                if let jsonArray = try JSONSerialization.jsonObject(with: data) as? [[String: Any]] {
-//                    var loadedItems: [String: TodoItem] = [:]
-//                    for dict in jsonArray {
-//                        if let item = TodoItem.parseJson(json: dict) {
-//                            loadedItems[item.id] = item
-//                        }
-//                    }
+//     public func load(from filename: String) async throws {
+//         let filePath = try getFilePath(for: filename)
+//         if FileManager.default.fileExists(atPath: filePath.path()) {
+//             do {
+//                 let data = try Data(contentsOf: filePath)
+//                 if let jsonArray = try JSONSerialization.jsonObject(with: data) as? [[String: Any]] {
+//                     var loadedItems: [String: TodoItem] = [:]
+//                     for dict in jsonArray {
+//                         if let item = await TodoItem.parseJson(json: dict) {
+//                             loadedItems[item.id] = item
+//                         }
+//                     }
 //
-//                    items = loadedItems
-//                    DDLogInfo("Loaded items from file: \(filename)")
-//                }
-//            } catch {
-//                DDLogError("Failed to load items from file: \(filename), error: \(error.localizedDescription)")
-//                throw error
-//            }
-//        } else {
-//            let error = NSError(
-//                domain: "FileCache",
-//                code: 404,
-//                userInfo: [NSLocalizedDescriptionKey: "File not found: \(filename)"]
-//            )
-//            DDLogError("File not found: \(filename)")
-//            throw error
-//        }
-//    }
+//                     items = loadedItems
+//                     DDLogInfo("Loaded items from file: \(filename)")
+//                 }
+//             } catch {
+//                 DDLogError("Failed to load items from file: \(filename), error: \(error.localizedDescription)")
+//                 throw error
+//             }
+//         } else {
+//             let error = NSError(
+//                 domain: "FileCache",
+//                 code: 404,
+//                 userInfo: [NSLocalizedDescriptionKey: "File not found: \(filename)"]
+//             )
+//             DDLogError("File not found: \(filename)")
+//             throw error
+//         }
+//     }
 //
 //    func getItem(by id: String) -> TodoItem? {
 //        let item = items[id]
@@ -96,7 +104,7 @@
 //        DDLogInfo("Updated item with id: \(id)")
 //    }
 // }
-
+//
 // private extension FileCacheService {
 //    func checkKeyContaining(id: String) -> Bool {
 //        return items[id] != nil

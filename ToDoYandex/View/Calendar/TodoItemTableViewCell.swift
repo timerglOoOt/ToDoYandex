@@ -61,7 +61,7 @@ extension TodoItemTableViewCell {
 
     func configure(with item: TodoItem) {
         itemTextLabel.text = item.text
-        categoryIndicator.backgroundColor = item.category.color
+//        categoryIndicator.backgroundColor = item.category.color
         updateTaskAppearance(isDone: item.isDone)
     }
 

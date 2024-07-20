@@ -7,8 +7,8 @@ extension TodoItem: JsonParsable {
             "id": id,
             "text": text,
             "isDone": isDone,
-            "createdDate": ISO8601DateFormatter().string(from: createdDate),
-            "category": category.id
+            "createdDate": ISO8601DateFormatter().string(from: createdDate)
+//            "category": category.id
         ]
 
         if priority != .normal {
