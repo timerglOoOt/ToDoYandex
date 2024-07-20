@@ -1,14 +1,17 @@
+import Foundation
+
 extension TodoItem {
-    private func dateFromUnixTimestamp(_ timestamp: Int64?) -> Date? {
+    private static func dateFromUnixTimestamp(_ timestamp: Int64?) -> Date? {
         guard let timestamp = timestamp else { return nil }
         return Date(timeIntervalSince1970: TimeInterval(timestamp))
     }
 
-    private func priorityFromString(_ priorityString: String?) -> Priority {
+    private static func priorityFromString(_ priorityString: String?) -> Priority {
         switch priorityString {
         case "low": return .low
         case "basic": return .normal
         case "important": return .high
+        default: return .normal
         }
     }
 
@@ -24,7 +27,7 @@ extension TodoItem {
         }
 
         let deadline = dateFromUnixTimestamp(response["deadline"] as? Int64)
-        let createdDate = dateFromUnixTimestamp(createdAt)
+        let createdDate = dateFromUnixTimestamp(createdAt) ?? Date.now
         let modifiedDate = dateFromUnixTimestamp(response["changed_at"] as? Int64)
         let hexColor = response["color"] as? String
         let priority = priorityFromString(importance)
